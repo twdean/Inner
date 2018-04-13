@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.OnboardingCompletePage"
+    BackgroundImage="background2.jpg">
+
+     <AbsoluteLayout>
+        <Image Source="Logo.png" x:Name="imgLogo"
+               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+
+       <Label x:Name="lblCompleteTitle" Text="All Done!" FontSize="20" HorizontalTextAlignment="Center"
+           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+        />
+        <Label x:Name="lblCompleteDesc" Text="You will recieve a gentle notification when it's time to connect with a member of your circle" 
+               FontSize="15" HorizontalTextAlignment="Center"
+           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.50,270,150" 
+        />
+
+         <Button Clicked="Handle_Clicked" Text="Start Now" TextColor="White" BackgroundColor="Navy" 
+               FontSize="15" BorderRadius="25"
+               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.70,170,50"
+         />
+      
+    </AbsoluteLayout>
+  <!--   <RelativeLayout BackgroundColor="Teal">
+        <Image Source="Logo.png" x:Name="imgLogo"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
+        />
+
+        <Label x:Name="lblCompleteTitle" Text="ALL DONE!" FontSize="20" XAlign="Center"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=imgLogo, Property=Y, Factor=1, Constant=130}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
+        />
+        <Label x:Name="lblCompleteDesc" Text="You will recieve a gentle notification when it's time to connect with a member of your circle" FontSize="20" XAlign="Center"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=lblCompleteTitle, Property=Y, Factor=1, Constant=30}"
+
+        />
+
+       <Button Scale="0.5" Clicked="Handle_Clicked" Text="Start Now" TextColor="White" BackgroundColor="Blue" WidthRequest="200" FontSize="30"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=lblCompleteDesc, Property=Y, Factor=1, Constant=150}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+               />
+        
+    </RelativeLayout>-->
+</ContentPage>

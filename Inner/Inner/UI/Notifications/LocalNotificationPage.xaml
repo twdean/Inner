@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    NavigationPage.HasNavigationBar = "false"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.LocalNotificationPage">
+    <StackLayout VerticalOptions="StartAndExpand" Padding="0,10,0,0">
+        <StackLayout BackgroundColor="Yellow">
+            <Label x:Name="notificationTitle" HorizontalOptions="Center"/>
+            <Label x:Name="notificationDesc" HorizontalOptions="Center"/> 
+            <Label x:Name="optionsDesc" HorizontalOptions="Center"/>    
+       </StackLayout>
+        <StackLayout BackgroundColor="Silver" Spacing="10" VerticalOptions="CenterAndExpand">
+            <Button Text="Phone" />
+            <Button Text="Email"/>
+            <Button Text="SMS"/>
+            <Button Text="Remind Me Later"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

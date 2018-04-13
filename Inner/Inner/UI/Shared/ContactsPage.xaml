@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    NavigationPage.HasNavigationBar = "true"
+    Padding="0,20,0,0"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.Shared.ContactsPage"
+    >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="mnuDone" Order="Primary" Text="Done" Priority="0" Clicked="Done_Clicked" />
+        <ToolbarItem Name="mnuInfo" Order="Primary" Text="Info" Priority="1" Clicked="Info_Clicked" />
+    </ContentPage.ToolbarItems>
+   <StackLayout Padding="10">
+        <SearchBar x:Name="innerSearch" Placeholder="Search for Contacts" SearchButtonPressed="Handle_SearchButtonPressed" TextChanged="Handle_TextChanged" />
+        <ListView 
+            x:Name="lstContacts" 
+            ItemsSource="{Binding Contacts}"
+            SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+            ItemSelected="Handle_ItemSelected"
+            ItemTapped="Handle_ItemTapped"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                <Label Text="{Binding FirstName}"/>
+                                <Label Text="{Binding LastName}"/> 
+                            </StackLayout>
+                            <Image Source="{Binding Image}" HorizontalOptions="EndAndExpand"/>     
+                        </StackLayout>
+                   </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

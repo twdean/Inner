@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    NavigationPage.HasNavigationBar = "false"
+    Title="Choose your circle" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Inner.UI.CreateCirclePage"
+    BackgroundImage="background2.jpg">
+
+    <AbsoluteLayout>
+         <Image Source="Logo.png" x:Name="imgLogo"
+               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+
+           <Label x:Name="lblWelcome" Text="Create Your Circle" FontSize="20" XAlign="Center"
+                HorizontalTextAlignment="Center"
+                AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            />
+
+            <Label x:Name="lblSubTitle" Text="Add up to five people from your contacts" FontSize="15" XAlign="Center"
+            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
+            />
+
+         <Button Image="icons8add.png" Scale="0.5" Clicked="Next_Clicked"
+               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+               />
+    </AbsoluteLayout>
+   <!-- <RelativeLayout>
+        <Image Source="Logo.png" x:Name="imgLogo"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
+        />
+
+       
+        <Label x:Name="lblWelcome" Text="Create Your Circle" FontSize="20" XAlign="Center"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.17}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.65}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+        />
+
+            <Label x:Name="lblSubTitle" Text="Add up to five people from your contacts" FontSize="12" XAlign="Center"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=lblWelcome, Property=Y, Factor=1, Constant=50}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.17}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.65}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+        />
+    
+     
+       <Button Image="icons8add.png" Scale="0.5" Clicked="Next_Clicked"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=lblWelcome, Property=Height, Factor=0.75}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
+               />
+        
+    </RelativeLayout>-->
+</ContentPage>

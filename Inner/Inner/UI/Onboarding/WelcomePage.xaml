@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    NavigationPage.HasNavigationBar = "false"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.WelcomePage"
+    BackgroundImage="background2.jpg"
+    Padding="0,20,0,0">
+
+    <AbsoluteLayout>
+            <Image Source="Logo.png" x:Name="imgLogo"
+               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+
+         <Label x:Name="lblProfileTitle" Text="Welcome!"
+            FontSize="20" HorizontalTextAlignment="Center"
+            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"/>
+
+                
+            <Label x:Name="lblWelcome" Text="Inner is the easiest and most effective way to keep in touch with those you love" 
+                   FontSize="15" HorizontalTextAlignment="Center"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
+            />
+
+        <Button Image="icons8right_circular.png" Scale="0.5" Clicked="Next_Clicked"
+               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+               />
+    </AbsoluteLayout>
+
+</ContentPage>
