@@ -167,6 +167,11 @@
     <AndroidResource Include="Resources\drawable\icons8right_round.png" />
     <AndroidResource Include="Resources\drawable\icons8checked.png" />
     <AndroidResource Include="Resources\drawable\background2.jpg" />
+    <AndroidResource Include="Resources\drawable\icons8rightround.png" />
+    <AndroidResource Include="Resources\drawable\icons8chevronrightround.png" />
+    <AndroidResource Include="Resources\drawable\icons8cancel.png" />
+    <AndroidResource Include="Resources\drawable\icons8checkedGreen.png" />
+    <AndroidResource Include="Resources\drawable\icons8okGreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />

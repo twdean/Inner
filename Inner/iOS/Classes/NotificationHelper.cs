@@ -51,9 +51,20 @@ namespace Inner.iOS.Classes
             throw new NotImplementedException();
         }
 
-        public void SendNotification(string title, string message)
+        public void SendNotification(string title, string message, long notifyTime)
         {
-            throw new NotImplementedException();
+            var content = new UNMutableNotificationContent
+            {
+                Title = title,
+                Subtitle = "Powered by Inner",
+                Body = message,
+                Badge = 1
+            };
+
+            var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(notifyTime, false);
+            var request = UNNotificationRequest.FromIdentifier("Flat App", content, trigger);
+
+            UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
         }
     }
 }

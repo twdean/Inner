@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
-    NavigationPage.HasNavigationBar = "true"
+    NavigationPage.HasNavigationBar = "false"
     Padding="0,20,0,0"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Inner.UI.Shared.ContactsPage"
     >
-    <ContentPage.ToolbarItems>
+  <!--  <ContentPage.ToolbarItems>
         <ToolbarItem Name="mnuDone" Order="Primary" Text="Done" Priority="0" Clicked="Done_Clicked" />
         <ToolbarItem Name="mnuInfo" Order="Primary" Text="Info" Priority="1" Clicked="Info_Clicked" />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
    <StackLayout Padding="10">
         <SearchBar x:Name="innerSearch" Placeholder="Search for Contacts" SearchButtonPressed="Handle_SearchButtonPressed" TextChanged="Handle_TextChanged" />
         <ListView 
             x:Name="lstContacts" 
             ItemsSource="{Binding Contacts}"
             SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
-            ItemSelected="Handle_ItemSelected"
             ItemTapped="Handle_ItemTapped"
             >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout VerticalOptions="Center" Orientation="Horizontal">
+                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="10">
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                                 <Label Text="{Binding FirstName}"/>
                                 <Label Text="{Binding LastName}"/> 
@@ -33,5 +32,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Grid>
+            <Button Image="icons8cancel.png" HeightRequest="50" WidthRequest="50" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Cancel_Clicked"/>
+            <Button Image="icons8okGreen.png" HeightRequest="50" WidthRequest="50" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Clicked="Finished_Clicked"/>
+        </Grid>
     </StackLayout>
 </ContentPage>

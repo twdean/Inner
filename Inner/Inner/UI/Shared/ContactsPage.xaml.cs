@@ -8,7 +8,8 @@ namespace Inner.UI.Shared
 {
     public partial class ContactsPage : ContentPage
     {
-        
+        bool _isManaging;
+
         public ContactsPage()
         {
             BindingContext = new ContactsViewModel(new PageService());
@@ -16,6 +17,17 @@ namespace Inner.UI.Shared
             InitializeComponent();
 
            
+        }
+
+        public ContactsPage(bool isManaging)
+        {
+
+            _isManaging = isManaging;
+            BindingContext = new ContactsViewModel(new PageService());
+
+            InitializeComponent();
+
+
         }
 
         void Handle_SearchButtonPressed(object sender, System.EventArgs e)
@@ -46,13 +58,6 @@ namespace Inner.UI.Shared
             lstContacts.EndRefresh();
         }
 
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            //var currentContact = e.SelectedItem as ContactViewModel;
-
-            //(BindingContext as ContactsViewModel).AddContact(currentContact);
-        }
-
         void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
             var currentContact = e.Item as ContactViewModel;
@@ -60,10 +65,10 @@ namespace Inner.UI.Shared
             (BindingContext as ContactsViewModel).AddContact(currentContact);
         }
 
-        async void Done_Clicked(object sender, System.EventArgs e)
-        {
-           await (BindingContext as ContactsViewModel).SaveCircle();
-        }
+        //async void Done_Clicked(object sender, System.EventArgs e)
+        //{
+        //   await (BindingContext as ContactsViewModel).SaveCircle(_isManaging);
+        //}
 
         void Info_Clicked(object sender, System.EventArgs e)
         {
@@ -85,5 +90,14 @@ namespace Inner.UI.Shared
             return answer;
         }
 
+        async void Finished_Clicked(object sender, System.EventArgs e)
+        {
+            await(BindingContext as ContactsViewModel).SaveCircle(_isManaging);
+        }
+
+        async void Cancel_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync(true);
+        }
     }
 }

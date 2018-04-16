@@ -65,7 +65,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Trevor Dean (8HX92U69M2)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -165,6 +165,11 @@
     <BundleResource Include="Resources\icons8right_round.png" />
     <BundleResource Include="Resources\icons8ok.png" />
     <BundleResource Include="Resources\icons8checked.png" />
+    <BundleResource Include="Resources\icons8rightround.png" />
+    <BundleResource Include="Resources\icons8chevronrightround.png" />
+    <BundleResource Include="Resources\icons8cancel.png" />
+    <BundleResource Include="Resources\icons8checkedGreen.png" />
+    <BundleResource Include="Resources\icons8okGreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />

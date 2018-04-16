@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,10 +38,27 @@ namespace Inner.ViewModels
                     FirstName = c.FirstName,
                     LastName = c.LastName,
                     Email = c.Email,
-                    InCircle = c.InCircle,
+                    InCircle = InCircle(c, preferences.InnerContacts),
                     PhoneNumber = c.PhoneNumber
                 });
             }
+        }
+
+        private bool InCircle(InnerContact currentContact, List<InnerContact> savedContacts)
+        {
+            if(savedContacts != null)
+            {
+                var contact = savedContacts.FirstOrDefault(x => x.FirstName == currentContact.FirstName && x.LastName == currentContact.LastName);
+
+                if (contact != null)
+                {
+                    if (contact.InCircle)
+                        return true;
+                }
+            }
+           
+
+            return false;
         }
 
         public void AddContact(ContactViewModel currentContact)
@@ -58,7 +76,7 @@ namespace Inner.ViewModels
         }
 
        
-        public async Task SaveCircle()
+        public async Task SaveCircle(bool isManaging)
         {
             var innerContacts = Contacts.Where(x => x.InCircle == true).ToList();
 
@@ -80,7 +98,15 @@ namespace Inner.ViewModels
                 try
                 {
                     InnerPreferences.SavePreferences(innerData);
-                    await _pageService.PushAsync(new InnerSummary());
+                   
+                    if(isManaging)
+                    {
+                        await _pageService.PopModalAsync(true);
+                    }
+                    else{
+                        await _pageService.PushAsync(new InnerSummary());
+                    }
+
 
                 }
                 catch (Exception ex)

@@ -19,12 +19,15 @@ namespace Inner.UI
             //<--TODO Need to send first notification
             var preferences = InnerPreferences.GetInnerPreferences();
 
-            var permissionHelper = DependencyService.Get<INotify>();
-            permissionHelper.GetPermissions();
+            var notificationHelper = DependencyService.Get<INotify>();
+            notificationHelper.GetPermissions();
 
-            CrossLocalNotifications.Current.Show("It's Time!", "Lets get you in touch with someone from your circle.", 100, DateTime.Now.AddSeconds(2));
+            notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", 2);
+
+            //CrossLocalNotifications.Current.Show("It's Time!", "Lets get you in touch with someone from your circle.", 100, DateTime.Now.AddSeconds(2));
 
             preferences.OnboardingComplete = true;
+            InnerPreferences.SavePreferences(preferences);
 
             //<!--TODO Need to call web service to insert data
         }

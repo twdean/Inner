@@ -19,6 +19,16 @@ namespace Inner.ViewModels
         {
             await Application.Current.MainPage.Navigation.PushAsync(page);
         }
+
+        public async Task PopModalAsync(bool animated)
+        {
+            await Application.Current.MainPage.Navigation.PopModalAsync(animated);
+        }
+
+        public async Task PushModalAsync(Page page, bool animated)
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(page, animated);
+        }
     }
 }
     

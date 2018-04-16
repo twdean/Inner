@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-
+using System.Globalization;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
+
 
 namespace Inner.UI
 {
@@ -14,7 +15,37 @@ namespace Inner.UI
 
         async void Next_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new OnboardingCompletePage());
+            var email = txtEmail.Text;
+            if(emailIsValid(email))
+            {
+                await Navigation.PushAsync(new OnboardingCompletePage());
+            }
+            else{
+                await DisplayAlert("opp!", "Looks like something might be wrong with your email address.", "OK");
+            }
+
         }
+
+        public static bool emailIsValid(string email)
+        {
+            string expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

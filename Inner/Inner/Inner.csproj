@@ -77,10 +77,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Completed\ProfilePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Completed\ManagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +84,10 @@
     <EmbeddedResource Include="UI\Completed\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Completed\InnerProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -132,9 +132,6 @@
     <Compile Include="UI\Completed\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Completed\ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UI\Completed\ManagePage.xaml.cs">
       <DependentUpon>ManagePage.xaml</DependentUpon>
     </Compile>
@@ -146,6 +143,9 @@
     <Compile Include="ViewModels\ContactViewModel.cs" />
     <Compile Include="ViewModels\IPageService.cs" />
     <Compile Include="ViewModels\PageService.cs" />
+    <Compile Include="UI\Completed\InnerProfilePage.xaml.cs">
+      <DependentUpon>InnerProfilePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\icons8save.png" />
@@ -158,6 +158,11 @@
     <None Include="Images\unselected_circle.png" />
     <None Include="Images\selected_circle.png" />
     <None Include="packages.config" />
+    <None Include="Images\icons8rightround.png" />
+    <None Include="Images\icons8chevronrightround.png" />
+    <None Include="Images\icons8cancel.png" />
+    <None Include="Images\icons8checkedGreen.png" />
+    <None Include="Images\icons8okGreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\" />

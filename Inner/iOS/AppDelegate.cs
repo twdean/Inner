@@ -8,6 +8,7 @@ using Inner.UI;
 using MessageUI;
 using SegmentedControl.FormsPlugin.iOS;
 using UIKit;
+using UserNotifications;
 
 namespace Inner.iOS
 {
@@ -24,6 +25,21 @@ namespace Inner.iOS
             formsApp = new App();
             LoadApplication(formsApp);
 
+            if(options != null)
+            {
+                if (options.ContainsKey(UIApplication.LaunchOptionsLocalNotificationKey))
+                {
+                    var localNotification = options[UIApplication.LaunchOptionsLocalNotificationKey] as UILocalNotification;
+                    if (localNotification != null)
+                    {
+                        // reset our badge
+                        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+
+                        ScheduleNotification();
+                        formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
+                    }
+                }
+            }
             return base.FinishedLaunching(app, options);
         }
 
@@ -34,84 +50,52 @@ namespace Inner.iOS
             // reset our badge
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
-            formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
+
+            try{
+                ScheduleNotification();
+                formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
 
 
         }
 
-        private void PresentNotificationOptions()
+        private void ScheduleNotification()
         {
             var prefs = InnerPreferences.GetInnerPreferences();
-            var innerContact = InnerPreferences.GetInnerContact(prefs.InnerContacts);
+            var nextDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
+            var DateInSeconds = (nextDate - DateTime.Now).TotalSeconds;
 
-            var nextNotificationDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
-
-            var messageTitle = string.Format("Give {0} a shout", innerContact.FirstName);
-            var message = string.Format("I bet {0} would love to hear from you!", innerContact.FirstName);
-
-            UIAlertController actionSheetAlert = UIAlertController.Create(messageTitle, message, UIAlertControllerStyle.ActionSheet);
-
-            // Add Actions
-            actionSheetAlert.AddAction(UIAlertAction.Create("Email", UIAlertActionStyle.Default, (action) => {
-                MFMailComposeViewController mailController;
-                if (MFMailComposeViewController.CanSendMail)
-                {
-                    mailController = new MFMailComposeViewController();
-                    mailController.SetToRecipients(new string[] { innerContact.Email });
-                    mailController.SetSubject("Something cool");
-                    mailController.SetMessageBody("We need to hang out!", true);
-
-                    mailController.Finished += (object sender, MFComposeResultEventArgs e) => {
-
-                        //update metrics
-                        e.Controller.DismissViewController(true, null);
-                    };
-
-                    this.Window.RootViewController.PresentViewController(mailController, true, null);
-                }
-                else
-                {
-
-                }
-            }));
-
-            actionSheetAlert.AddAction(UIAlertAction.Create("SMS", UIAlertActionStyle.Default, (action) => {
-                var smsTo = NSUrl.FromString(string.Format("sms:{0}", innerContact.PhoneNumber));
-                UIApplication.SharedApplication.OpenUrl(smsTo);
-
-                //update metrics
-
-            }));
-
-            actionSheetAlert.AddAction(UIAlertAction.Create("Phone", UIAlertActionStyle.Default, (action) => {
-                var callTo = new NSUrl(string.Format("tel:{0}", innerContact.PhoneNumber));
-                UIApplication.SharedApplication.OpenUrl(callTo);
-
-                //update metrics
-
-            }));
-
-            actionSheetAlert.AddAction(UIAlertAction.Create("Remind me later", UIAlertActionStyle.Default, (action) => {
-
-                //update metrics, update push notification date
-
-                nextNotificationDate = nextNotificationDate.AddDays(1);
-                //UpdateAppDataAsync(nextNotificationDate);
-
-            }));
+            var content = new UNMutableNotificationContent
+            {
+                Title = "Inner",
+                Subtitle = "Don't be shy",
+                Body = "Time to talk to someone in your circle today!",
+                Badge = 1
+            };
 
 
-            actionSheetAlert.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, (action) => {
+            var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(DateInSeconds, false);
+            var request = UNNotificationRequest.FromIdentifier("Inner Apps", content, trigger);
 
-                //update metrics
+            UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
+        }
 
-            }));
-
-            //UpdateRemoteNotificationTags(nextNotificationDate);
-            //this.Window.RootViewController.NavigationController.PushViewController(actionSheetAlert, true);
-
-            formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
-
+        private void ClearPendingNotifications()
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                UNUserNotificationCenter.Current.RemoveAllPendingNotificationRequests(); // To remove all pending notifications which are not delivered yet but scheduled.
+                UNUserNotificationCenter.Current.RemoveAllDeliveredNotifications(); // To remove all delivered notifications
+            }
+            else
+            {
+                UIApplication.SharedApplication.CancelAllLocalNotifications();
+            }
         }
     }
 }

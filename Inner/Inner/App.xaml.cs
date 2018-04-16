@@ -11,6 +11,7 @@ namespace Inner
             InitializeComponent();
 
             var preferences = InnerPreferences.GetInnerPreferences();
+
             if(preferences.OnboardingComplete)
             {
                 MainPage = new NavigationPage(new UI.Completed.ManageTabbedPage());

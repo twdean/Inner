@@ -93,12 +93,17 @@ namespace Inner.Classes
 
         public static InnerContact GetInnerContact(List<InnerContact> contacts)
         {
-            Random r = new Random();
-            int rInt = r.Next(0, contacts.Count);
+            if(contacts != null)
+            {
+                Random r = new Random();
+                int rInt = r.Next(0, contacts.Count);
 
-            var contact = contacts[rInt];
+                var contact = contacts[rInt];
 
-            return contact;
+                return contact;
+            }
+
+            return null;
 
         }
 

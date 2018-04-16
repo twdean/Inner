@@ -3,18 +3,27 @@
     NavigationPage.HasNavigationBar = "false"
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Inner.UI.LocalNotificationPage">
-    <StackLayout VerticalOptions="StartAndExpand" Padding="0,10,0,0">
-        <StackLayout BackgroundColor="Yellow">
+    x:Class="Inner.UI.LocalNotificationPage"
+    BackgroundImage="background2.jpg">
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
+        <StackLayout>
             <Label x:Name="notificationTitle" HorizontalOptions="Center"/>
             <Label x:Name="notificationDesc" HorizontalOptions="Center"/> 
             <Label x:Name="optionsDesc" HorizontalOptions="Center"/>    
        </StackLayout>
-        <StackLayout BackgroundColor="Silver" Spacing="10" VerticalOptions="CenterAndExpand">
-            <Button Text="Phone" />
-            <Button Text="Email"/>
-            <Button Text="SMS"/>
-            <Button Text="Remind Me Later"/>
-        </StackLayout>
+        <Grid Padding="10" RowSpacing="40">
+            <Button Text="Phone" Clicked="Phone_Clicked" BorderWidth="2" BorderRadius="5"  BorderColor="White" TextColor="White"
+             Grid.Row="0"  Grid.Column="0"
+                    />
+            <Button Text="Email" Clicked="Email_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
+                Grid.Row="1" Grid.Column="0"
+                    />
+            <Button Text="SMS" Clicked="Sms_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
+                Grid.Row="2" Grid.Column="0"
+                    />
+            <Button Text="Remind Me Later" Clicked="Later_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
+                Grid.Row="3" Grid.Column="0"
+                    />
+        </Grid>
     </StackLayout>
 </ContentPage>

@@ -14,6 +14,7 @@ namespace Inner.UI
 
         async void Next_Clicked(object sender, System.EventArgs e)
         {
+            //await Navigation.PushModalAsync(new Shared.ContactsPage(), true);
             await Navigation.PushAsync(new Shared.ContactsPage(), true);
         }
     }
