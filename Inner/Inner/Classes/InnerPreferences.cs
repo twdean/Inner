@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Inner.Interfaces;
 using Newtonsoft.Json;
 using PCLStorage;
+using Xamarin.Forms;
 
 namespace Inner.Classes
 {
@@ -15,6 +17,9 @@ namespace Inner.Classes
         public Guid InnerAppId { get; set; }
         public string DeviceToken { get; set; }
         public bool OnboardingComplete { get; set; }
+        public TimeSpan NextNotifyTime {get{
+                return NextNotifyDate.TimeOfDay;
+            }}
 
         public InnerPreferences()
         {
@@ -132,6 +137,27 @@ namespace Inner.Classes
             }
 
             return nextRunDate;
+        }
+
+        public static bool UpdateNotifications(DateTime newNotificationDate)
+        {
+            try{
+                var notificationHelper = DependencyService.Get<INotify>();
+                notificationHelper.ClearAllNotifications();
+
+ 
+                var nextRunTime = (newNotificationDate - DateTime.Now).TotalSeconds;
+
+
+                notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", (long)nextRunTime);
+
+
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
         }
 
 

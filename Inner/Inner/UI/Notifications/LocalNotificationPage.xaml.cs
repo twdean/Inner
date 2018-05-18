@@ -48,6 +48,12 @@ namespace Inner.UI
             Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
         }
 
+        void Video_Clicked(object sender, System.EventArgs e)
+        {
+            Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+        }
+
+
         void Later_Clicked(object sender, System.EventArgs e)
         {
             DisplayAlert("OK", "We have rescheduled your reminder.", "OK");

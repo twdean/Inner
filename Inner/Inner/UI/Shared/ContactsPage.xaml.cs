@@ -61,14 +61,27 @@ namespace Inner.UI.Shared
         void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
             var currentContact = e.Item as ContactViewModel;
+            if(!currentContact.InCircle)
+            {
+                (BindingContext as ContactsViewModel).AddContact(currentContact);
+                //var contacts = (BindingContext as ContactsViewModel).Contacts;
 
-            (BindingContext as ContactsViewModel).AddContact(currentContact);
+                //if (contacts.Where(x => x.InCircle == true).Count() <= 4)
+                //{
+                //    (BindingContext as ContactsViewModel).AddContact(currentContact);
+                //}
+                //else
+                //{
+                //    DisplayAlert("Whoa!", "Looks like you've added your fill of contacts for now", "OK");
+                //}
+            }
+            else{
+                (BindingContext as ContactsViewModel).AddContact(currentContact);
+            }
+           
+           
         }
 
-        //async void Done_Clicked(object sender, System.EventArgs e)
-        //{
-        //   await (BindingContext as ContactsViewModel).SaveCircle(_isManaging);
-        //}
 
         void Info_Clicked(object sender, System.EventArgs e)
         {
@@ -97,7 +110,14 @@ namespace Inner.UI.Shared
 
         async void Cancel_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PopModalAsync(true);
+            if(_isManaging)
+            {
+                await Navigation.PopModalAsync(true);
+            }
+            else{
+                await Navigation.PushAsync(new CreateCirclePage());
+            }
+
         }
     }
 }

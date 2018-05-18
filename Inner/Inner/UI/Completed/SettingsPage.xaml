@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.Completed.SettingsPage">
+
+    <TableView Intent="Settings">
+        <TableRoot>
+            <TableSection Title="Your Circle">
+                <ViewCell Tapped="Circle_Tapped">
+                    <Grid Padding="13, 0">
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Manage" VerticalOptions="Center"/>
+                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
+                    </Grid>
+                </ViewCell>
+          
+            </TableSection>
+            <TableSection Title="Reminders">
+                 <ViewCell Tapped="Reminders_Tapped">
+                     <Grid Padding="13, 0">
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Schedule" VerticalOptions="Center"/>
+                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
+                    </Grid>
+                </ViewCell>
+               
+            </TableSection>
+
+            <TableSection Title="Notifications">
+                <ViewCell Tapped="Notifications_Tapped">
+                     <Grid Padding="13, 0">
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Frequency" VerticalOptions="Center"/>
+                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
+                    </Grid>
+                </ViewCell>
+                 
+            </TableSection>
+
+           
+        </TableRoot>
+    </TableView>
+</ContentPage>

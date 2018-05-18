@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inner.Classes;
+using Inner.Interfaces;
 using Xamarin.Forms;
 
 namespace Inner.UI.Completed
@@ -12,22 +13,25 @@ namespace Inner.UI.Completed
             get;
             set;
         }
+
         public ManagePage()
         {
             InitializeComponent();      
         }
 
 		protected override void OnAppearing()
-		{
-            InnerPrefs = InnerPreferences.GetInnerPreferences();
+		{           
             LoadSummary();
-			base.OnAppearing();
+
 		}
 
 		private void LoadSummary()
         {
             int col = 0;
             int row = 0;
+
+            InnerPrefs = InnerPreferences.GetInnerPreferences();
+            BindingContext = InnerPrefs;
 
             if (InnerPrefs != null)
             {
@@ -40,11 +44,10 @@ namespace Inner.UI.Completed
                     {
                         Button btn = new Button()
                         {
-                            Image = "icons8chevronrightround.png",
-                            HorizontalOptions = LayoutOptions.CenterAndExpand,
-                            VerticalOptions = LayoutOptions.CenterAndExpand,
-                            WidthRequest = 30,
-                            HeightRequest = 30
+                            Image = "icons8chevronrightwhite.png",
+                            VerticalOptions = LayoutOptions.Start,
+                            WidthRequest = 25,
+                            HeightRequest = 25
 
                         };
 
@@ -56,33 +59,25 @@ namespace Inner.UI.Completed
                             Navigation.PushAsync(profilePage);    
                         };
 
-                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName), VerticalOptions = LayoutOptions.Center }, col, row);
+                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName),TextColor = Color.White, VerticalOptions = LayoutOptions.Start }, col, row);
                         grdInnerSummary.Children.Add(btn, ++col, row);
 
                         col = 0;
                         row++;
                     }
 
-                    Button btnManage = new Button()
-                    {
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
-                        VerticalOptions = LayoutOptions.CenterAndExpand,
-                        Text = "Manage",
-                        TextColor = Color.White,
-                        FontSize = 12
-
-                    };
-
-                    btnManage.Clicked += (sender, e) => {
-                        var contactsPage = new Shared.ContactsPage(true);
-
-
-                        Navigation.PushModalAsync(contactsPage, true);
-                    };
-
-                    grdInnerSummary.Children.Add(btnManage, col, row);
+                   
                 }
             }
+        }
+
+      
+        void Manage_Clicked(object sender, System.EventArgs e)
+        {
+            var contactsPage = new Shared.ContactsPage(true);
+
+
+            Navigation.PushModalAsync(contactsPage, true);
         }
     }
 }

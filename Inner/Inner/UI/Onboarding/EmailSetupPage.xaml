@@ -3,19 +3,19 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Inner.UI.EmailSetupPage"
-    BackgroundImage="background2.jpg">
+    BackgroundImage="bluebackground.png">
 
       <AbsoluteLayout>
             <Image Source="Logo.png" x:Name="imgLogo"
                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
 
          <Label x:Name="lblProfileTitle" Text="Complete Your Profile"
-            FontSize="20" HorizontalTextAlignment="Center"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            FontSize="30" TextColor="White" HorizontalTextAlignment="Center"
+            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,300,150"
 
                 />
         <Label x:Name="lblProfileDesc" Text="Get Updates on your level of connections, trackk your communications and more"
-            FontSize="15" HorizontalTextAlignment="Center"
+            FontSize="15" TextColor="White" HorizontalTextAlignment="Center"
             AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,300,150"
         />
 

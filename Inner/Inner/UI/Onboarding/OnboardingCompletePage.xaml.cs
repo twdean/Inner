@@ -23,11 +23,16 @@ namespace Inner.UI
             notificationHelper.GetPermissions();
 
             notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", 2);
-
-            //CrossLocalNotifications.Current.Show("It's Time!", "Lets get you in touch with someone from your circle.", 100, DateTime.Now.AddSeconds(2));
+            preferences.LastRunDate = DateTime.Now;
 
             preferences.OnboardingComplete = true;
             InnerPreferences.SavePreferences(preferences);
+            lblNotification.IsVisible = true;
+            btnStart.Text = "Here is Comes!";
+            btnStart.IsEnabled = false;
+           
+
+
 
             //<!--TODO Need to call web service to insert data
         }

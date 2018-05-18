@@ -4,22 +4,25 @@
     Title="Choose your circle" 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Inner.UI.CreateCirclePage"
-    BackgroundImage="background2.jpg">
+    BackgroundImage="bluebackground.png">
 
     <AbsoluteLayout>
          <Image Source="Logo.png" x:Name="imgLogo"
                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
 
-           <Label x:Name="lblWelcome" Text="Create Your Circle" FontSize="20" XAlign="Center"
+           <Label x:Name="lblWelcome" Text="Create Your Circle" 
+                FontSize="30" TextColor="White" XAlign="Center"
                 HorizontalTextAlignment="Center"
                 AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
             />
 
-            <Label x:Name="lblSubTitle" Text="Add up to five people from your contacts" FontSize="15" XAlign="Center"
+            <Label x:Name="lblSubTitle" 
+                   Text="Add people from your contacts" 
+                   FontSize="20" TextColor="White" XAlign="Center"
             AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
             />
 
-         <Button Image="icons8add.png" Scale="0.5" Clicked="Next_Clicked"
+         <Button Image="icons8pluswhite.png" Scale="0.5" Clicked="Next_Clicked"
                AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
                />
     </AbsoluteLayout>

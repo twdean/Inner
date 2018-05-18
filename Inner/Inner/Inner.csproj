@@ -89,6 +89,37 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\bluebackground.png" />
+    <EmbeddedResource Include="Images\inner.png" />
+    <EmbeddedResource Include="Images\inner%402x.png" />
+    <EmbeddedResource Include="Images\icons8dashboard.png" />
+    <EmbeddedResource Include="Images\icons8gmail.png" />
+    <EmbeddedResource Include="Images\icons8last24hours.png" />
+    <EmbeddedResource Include="Images\icons8message.png" />
+    <EmbeddedResource Include="Images\icons8phone.png" />
+    <EmbeddedResource Include="Images\icons8picture.png" />
+    <EmbeddedResource Include="Images\icons8pluswhite.png" />
+    <EmbeddedResource Include="Images\icons8reminder.png" />
+    <EmbeddedResource Include="Images\icons8rightcircularwhite.png" />
+    <EmbeddedResource Include="Images\icons8speechbubble.png" />
+    <EmbeddedResource Include="Images\icons8videocall.png" />
+    <EmbeddedResource Include="Images\icons8about.png" />
+    <EmbeddedResource Include="Images\icons8accessibility2.png" />
+    <EmbeddedResource Include="Images\icons8calendarplus.png" />
+    <EmbeddedResource Include="Images\icons8calendarplusmall.png" />
+    <EmbeddedResource Include="UI\Completed\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\chevron_right_gray.png" />
+    <EmbeddedResource Include="UI\Completed\RemindersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Completed\NotificationsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -146,6 +177,16 @@
     <Compile Include="UI\Completed\InnerProfilePage.xaml.cs">
       <DependentUpon>InnerProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\InnerFeedItem.cs" />
+    <Compile Include="UI\Completed\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Completed\RemindersPage.xaml.cs">
+      <DependentUpon>RemindersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Completed\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\icons8save.png" />
@@ -163,6 +204,7 @@
     <None Include="Images\icons8cancel.png" />
     <None Include="Images\icons8checkedGreen.png" />
     <None Include="Images\icons8okGreen.png" />
+    <None Include="Images\icons8chevronrightwhite.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\" />
@@ -204,6 +246,9 @@
     </Reference>
     <Reference Include="Plugin.LocalNotifications">
       <HintPath>..\packages\Xam.Plugins.Notifier.2.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.LocalNotifications.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\netstandard1.0\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

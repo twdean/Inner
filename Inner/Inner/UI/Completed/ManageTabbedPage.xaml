@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Inner.UI.Completed.ManageTabbedPage"
     xmlns:local="clr-namespace:Inner.UI.Completed">
-    <local:ManagePage Title="Manage" Icon="icons8-settings.png"/>
-    <local:DashboardPage Title="Dashboard" Icon="icons8-speed.png"/>
-    <local:AboutPage Title="About" Icon="icons8-info.png"/>
+    <local:SettingsPage Title="Settings" Icon="icons8accessibility2.png"/>
+    <local:DashboardPage Title="Dashboard" Icon="icons8dashboard.png"/>
+    <local:AboutPage Title="About" Icon="icons8about.png"/>
 </TabbedPage>

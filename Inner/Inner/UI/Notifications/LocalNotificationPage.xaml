@@ -4,26 +4,46 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Inner.UI.LocalNotificationPage"
-    BackgroundImage="background2.jpg">
+    BackgroundImage="bluebackground.png">
     <StackLayout VerticalOptions="CenterAndExpand" Padding="0,10,0,0">
         <StackLayout>
-            <Label x:Name="notificationTitle" HorizontalOptions="Center"/>
-            <Label x:Name="notificationDesc" HorizontalOptions="Center"/> 
-            <Label x:Name="optionsDesc" HorizontalOptions="Center"/>    
+            <Label x:Name="notificationTitle" HorizontalOptions="Center" TextColor="White"/>
+            <Label x:Name="notificationDesc" HorizontalOptions="Center" TextColor="White"/> 
+  
        </StackLayout>
-        <Grid Padding="10" RowSpacing="40">
-            <Button Text="Phone" Clicked="Phone_Clicked" BorderWidth="2" BorderRadius="5"  BorderColor="White" TextColor="White"
-             Grid.Row="0"  Grid.Column="0"
-                    />
-            <Button Text="Email" Clicked="Email_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
-                Grid.Row="1" Grid.Column="0"
-                    />
-            <Button Text="SMS" Clicked="Sms_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
-                Grid.Row="2" Grid.Column="0"
-                    />
-            <Button Text="Remind Me Later" Clicked="Later_Clicked" BorderWidth="2" BorderRadius="5" BorderColor="White" TextColor="White"
-                Grid.Row="3" Grid.Column="0"
-                    />
+
+        <Grid Padding="15" RowSpacing="15">
+            <Label x:Name="optionsDesc" HorizontalOptions="Center" TextColor="White"
+                   Grid.Row="0" Grid.Column="0" />  
+            
+            <Button x:Name="btnSms" Image="icons8speechbubble.png" Text="SMS" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Sms_Clicked"
+                    Grid.Row="1" Grid.Column="0" />
+   
+            <Button x:Name="btnPhone" Image="icons8phone.png" Text="Phone" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Phone_Clicked"
+                    Grid.Row="2" Grid.Column="0"/>
+
+            <Button x:Name="btnVideo" Image="icons8videocall.png" Text="Video" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Video_Clicked"
+                    Grid.Row="3" Grid.Column="0"/>
+            
+            <Button x:Name="btnMail" Image="icons8gmail.png" Text="Email" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Email_Clicked"
+                    Grid.Row="4" Grid.Column="0"/>
+            
+           <Button x:Name="btnLater" Image="icons8last24hours.png" Text="Later" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Later_Clicked"
+                    Grid.Row="5" Grid.Column="0" />
+                   
+            
         </Grid>
-    </StackLayout>
+
+<!--       <StackLayout x:Name="contactOptionsLayout" Orientation="Vertical" Spacing="35" Padding="25"
+            AbsoluteLayout.LayoutFlags="PositionProportional" 
+            AbsoluteLayout.LayoutBounds="0,0.35,150,150"
+            >
+            <Button x:Name="btnSms" Image="icons8speechbubble.png" Text="SMS" TextColor="White" HeightRequest="50" WidthRequest="50" Clicked="Sms_Clicked" />
+            <Button x:Name="btnPhone" Image="icons8phone.png" Text="Phone" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Phone_Clicked" />
+            <Button x:Name="btnVideo" Image="icons8videocall.png" Text="Video" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Video_Clicked"/>
+            <Button x:Name="btnMail" Image="icons8gmail.png" Text="Email" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Email_Clicked"/>
+            <Button x:Name="btnLater" Image="icons8calendarplusmall.png" Text="Reschedule" TextColor="White"  HeightRequest="50" WidthRequest="50" Clicked="Later_Clicked"/>
+        </StackLayout>
+-->
+     </StackLayout>
 </ContentPage>

@@ -63,6 +63,7 @@ namespace Inner.ViewModels
 
         public void AddContact(ContactViewModel currentContact)
         {
+
             if (currentContact.InCircle)
             {
                 currentContact.InCircle = false;
@@ -72,32 +73,31 @@ namespace Inner.ViewModels
             {
                 currentContact.InCircle = true;
             }
-
-        }
+      }
 
        
         public async Task SaveCircle(bool isManaging)
         {
+            var innerPreferences = InnerPreferences.GetInnerPreferences();
+
             var innerContacts = Contacts.Where(x => x.InCircle == true).ToList();
 
             if (innerContacts.Count > 0)
             {
 
-                var innerData = new InnerPreferences
+                innerPreferences.InnerContacts = innerContacts.Select(x => new InnerContact
                 {
-                    InnerContacts = innerContacts.Select(x => new InnerContact
-                    {
-                        FirstName = x.FirstName,
-                        LastName = x.LastName,
-                        Email = x.Email,
-                        InCircle = x.InCircle,
-                        PhoneNumber = x.PhoneNumber
-                    }).ToList()
-                };  
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Email = x.Email,
+                    InCircle = x.InCircle,
+                    PhoneNumber = x.PhoneNumber
+                }).ToList();
+            
 
                 try
                 {
-                    InnerPreferences.SavePreferences(innerData);
+                    InnerPreferences.SavePreferences(innerPreferences);
                    
                     if(isManaging)
                     {

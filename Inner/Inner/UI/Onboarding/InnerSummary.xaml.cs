@@ -42,7 +42,7 @@ namespace Inner.UI
                 {
                     foreach(var c in contacts)
                     {
-                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName )}, col, row++);
+                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName ), TextColor=Color.White}, col, row++);
                     }
 
                 }
