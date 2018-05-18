@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using Inner.Classes;
 using Inner.UI;
 using MessageUI;
 using SegmentedControl.FormsPlugin.iOS;
 using UIKit;
 using UserNotifications;
+
 
 namespace Inner.iOS
 {
@@ -21,6 +23,7 @@ namespace Inner.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             SegmentedControlRenderer.Init();
+            ImageCircleRenderer.Init();
 
             formsApp = new App();
             LoadApplication(formsApp);
@@ -68,6 +71,9 @@ namespace Inner.iOS
         {
             var prefs = InnerPreferences.GetInnerPreferences();
             var nextDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
+            prefs.NextNotifyDate = nextDate;
+            InnerPreferences.SavePreferences(prefs);
+
             var DateInSeconds = (nextDate - DateTime.Now).TotalSeconds;
 
             var content = new UNMutableNotificationContent

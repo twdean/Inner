@@ -1,24 +1,28 @@
 ﻿<Properties StartupConfiguration="{86963E75-854D-48D9-AD2F-E1BE172878BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Inner/ViewModels/PageService.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Inner/ViewModels/ContactsViewModel.cs" Line="48" Column="17" />
-      <File FileName="iOS/Classes/ContactHelper.cs" Line="17" Column="27" />
-      <File FileName="Droid/Classes/ContactHelper.cs" Line="23" Column="27" />
-      <File FileName="Inner/Interfaces/IContact.cs" Line="10" Column="20" />
-      <File FileName="Inner/ViewModels/ContactViewModel.cs" Line="16" Column="1" />
-      <File FileName="Inner/UI/Shared/ContactsPage.xaml.cs" Line="54" Column="1" />
-      <File FileName="Inner/UI/Shared/ContactsPage.xaml" Line="20" Column="42" />
-      <File FileName="Inner/ViewModels/BaseViewModel.cs" Line="28" Column="45" />
-      <File FileName="Inner/ViewModels/IPageService.cs" Line="10" Column="89" />
-      <File FileName="Inner/ViewModels/PageService.cs" Line="7" Column="36" />
+      <File FileName="Inner/UI/Completed/RemindersPage.xaml" Line="29" Column="25" />
+      <File FileName="Inner/UI/Completed/RemindersPage.xaml.cs" Line="49" Column="13" />
+      <File FileName="Inner/UI/Completed/ManagePage.xaml" Line="24" Column="51" />
+      <File FileName="Inner/UI/Completed/ManagePage.xaml.cs" Line="44" Column="22" />
+      <File FileName="Inner/UI/Onboarding/WelcomePage.xaml" Line="30" Column="1" />
+      <File FileName="Inner/obj/Debug/Inner.UI.Completed.RemindersPage.xaml.g.cs" Line="26" Column="1" />
+      <File FileName="Inner/UI/Completed/SettingsPage.xaml.cs" Line="31" Column="59" />
+      <File FileName="Inner/UI/Onboarding/NotificationFrequencySetupPage.xaml" Line="37" Column="37" />
+      <File FileName="Inner/UI/Completed/NotificationsPage.xaml.cs" Line="53" Column="186" />
+      <File FileName="Inner/UI/Completed/SettingsPage.xaml" Line="42" Column="1" />
+      <File FileName="Inner/Classes/InnerPreferences.cs" Line="151" Column="17" />
+      <File FileName="Inner/obj/Debug/Inner.UI.Completed.NotificationsPage.xaml.g.cs" Line="29" Column="1" />
+      <File FileName="Inner/UI/Completed/NotificationsPage.xaml" Line="22" Column="49" />
+      <File FileName="iOS/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Inner.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.31F45062-4FAE-476D-84F3-1C1959DCC0CC" automaticSigning="False" />
+  <MonoDevelop.Ide.ItemProperties.Inner.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" automaticSigning="False" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Inner.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.ItemProperties.Inner.Droid PreferredExecutionTarget="Android.Nexus 4 (Marshmallow)" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
   <MultiItemStartupConfigurations />
 </Properties>

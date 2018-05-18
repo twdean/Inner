@@ -127,6 +127,12 @@
     <Reference Include="Plugin.LocalNotifications">
       <HintPath>..\packages\Xam.Plugins.Notifier.2.1.0\lib\MonoAndroid10\Plugin.LocalNotifications.dll</HintPath>
     </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Android">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.2.0.2\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inner\Inner.csproj">
@@ -147,6 +153,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="Resources\icons8dashboard.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -172,6 +179,25 @@
     <AndroidResource Include="Resources\drawable\icons8cancel.png" />
     <AndroidResource Include="Resources\drawable\icons8checkedGreen.png" />
     <AndroidResource Include="Resources\drawable\icons8okGreen.png" />
+    <AndroidResource Include="Resources\drawable\bluebackground.png" />
+    <AndroidResource Include="Resources\drawable\inner.png" />
+    <AndroidResource Include="Resources\drawable\icons8message.png" />
+    <AndroidResource Include="Resources\drawable\icons8gmail.png" />
+    <AndroidResource Include="Resources\drawable\icons8videocall.png" />
+    <AndroidResource Include="Resources\drawable\icons8phone.png" />
+    <AndroidResource Include="Resources\drawable\icons8speechbubble.png" />
+    <AndroidResource Include="Resources\drawable\icons8picture.png" />
+    <AndroidResource Include="Resources\drawable\icons8reminder.png" />
+    <AndroidResource Include="Resources\drawable\icons8calendarplus.png" />
+    <AndroidResource Include="Resources\drawable\icons8calendarplusmall.png" />
+    <AndroidResource Include="Resources\drawable\icons8last24hours.png" />
+    <AndroidResource Include="Resources\drawable\icons8pluswhite.png" />
+    <AndroidResource Include="Resources\drawable\icons8rightcircularwhite.png" />
+    <AndroidResource Include="Resources\drawable\icons8accessibility2.png" />
+    <AndroidResource Include="Resources\drawable\icons8about.png" />
+    <AndroidResource Include="Resources\drawable\icons8dashboard.png" />
+    <AndroidResource Include="Resources\drawable\icons8chevronrightwhite.png" />
+    <AndroidResource Include="Resources\drawable\chevron_right_gray.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />

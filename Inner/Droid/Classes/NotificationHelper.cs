@@ -14,6 +14,11 @@ namespace Inner.Droid.Classes
         {
         }
 
+        public void ClearAllNotifications()
+        {
+            throw new NotImplementedException();
+        }
+
         public void GetPermissions()
         {
             

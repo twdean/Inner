@@ -66,5 +66,18 @@ namespace Inner.iOS.Classes
 
             UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
         }
+
+        public void ClearAllNotifications()
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                UNUserNotificationCenter.Current.RemoveAllPendingNotificationRequests(); // To remove all pending notifications which are not delivered yet but scheduled.
+                UNUserNotificationCenter.Current.RemoveAllDeliveredNotifications(); // To remove all delivered notifications
+            }
+            else
+            {
+                UIApplication.SharedApplication.CancelAllLocalNotifications();
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using SegmentedControl.FormsPlugin.Android;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace Inner.Droid
 {
@@ -28,6 +29,7 @@ namespace Inner.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             SegmentedControlRenderer.Init();
+            ImageCircleRenderer.Init();
 
             LoadApplication(new App());
         }
