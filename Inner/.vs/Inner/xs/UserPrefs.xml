@@ -1,22 +1,5 @@
 ﻿<Properties StartupConfiguration="{86963E75-854D-48D9-AD2F-E1BE172878BB}|Default">
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Inner/UI/Completed/RemindersPage.xaml" Line="29" Column="25" />
-      <File FileName="Inner/UI/Completed/RemindersPage.xaml.cs" Line="49" Column="13" />
-      <File FileName="Inner/UI/Completed/ManagePage.xaml" Line="24" Column="51" />
-      <File FileName="Inner/UI/Completed/ManagePage.xaml.cs" Line="44" Column="22" />
-      <File FileName="Inner/UI/Onboarding/WelcomePage.xaml" Line="30" Column="1" />
-      <File FileName="Inner/obj/Debug/Inner.UI.Completed.RemindersPage.xaml.g.cs" Line="26" Column="1" />
-      <File FileName="Inner/UI/Completed/SettingsPage.xaml.cs" Line="31" Column="59" />
-      <File FileName="Inner/UI/Onboarding/NotificationFrequencySetupPage.xaml" Line="37" Column="37" />
-      <File FileName="Inner/UI/Completed/NotificationsPage.xaml.cs" Line="53" Column="186" />
-      <File FileName="Inner/UI/Completed/SettingsPage.xaml" Line="42" Column="1" />
-      <File FileName="Inner/Classes/InnerPreferences.cs" Line="151" Column="17" />
-      <File FileName="Inner/obj/Debug/Inner.UI.Completed.NotificationsPage.xaml.g.cs" Line="29" Column="1" />
-      <File FileName="Inner/UI/Completed/NotificationsPage.xaml" Line="22" Column="49" />
-      <File FileName="iOS/Info.plist" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
