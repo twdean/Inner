@@ -32,6 +32,7 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/Xamarin.Forms.2.5.0.280555/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Tools.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Net.Primitives.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/PCLStorage.1.0.2/lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.Abstractions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Resources.ResourceManager.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/SegmentedControl.FormsPlugin.2.0.1/lib/Xamarin.iOS10/SegmentedControl.FormsPlugin.Abstractions.dll
@@ -56,5 +57,6 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/Xam.Plugins.Forms.ImageCircle.2.0.2/lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.Abstractions.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/PCLStorage.1.0.2/lib/portable-Xamarin.iOS+Xamarin.Mac/PCLStorage.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/Newtonsoft.Json.11.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/SegmentedControl.FormsPlugin.2.0.1/lib/Xamarin.iOS10/SegmentedControl.FormsPlugin.iOS.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/packages/Xam.Plugins.Forms.ImageCircle.2.0.2/lib/Xamarin.iOS10/ImageCircle.Forms.Plugin.iOS.dll

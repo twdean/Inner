@@ -27,7 +27,7 @@ namespace Inner.ViewModels
         {
             _pageService = pageService;
 
-            var preferences = InnerPreferences.GetInnerPreferences();
+            var preferences = FileManager.GetPreferences();
             var InnerContacts = DependencyService.Get<IContact>().GetContacts();
             Contacts = new ObservableCollection<ContactViewModel>();
         
@@ -78,7 +78,7 @@ namespace Inner.ViewModels
        
         public async Task SaveCircle(bool isManaging)
         {
-            var innerPreferences = InnerPreferences.GetInnerPreferences();
+            var innerPreferences = FileManager.GetPreferences();
 
             var innerContacts = Contacts.Where(x => x.InCircle == true).ToList();
 
@@ -97,7 +97,7 @@ namespace Inner.ViewModels
 
                 try
                 {
-                    InnerPreferences.SavePreferences(innerPreferences);
+                    FileManager.SavePreferences(innerPreferences);
                    
                     if(isManaging)
                     {

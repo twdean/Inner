@@ -10,7 +10,7 @@ namespace Inner
         {
             InitializeComponent();
 
-            var preferences = InnerPreferences.GetInnerPreferences();
+            var preferences = FileManager.GetPreferences();
 
             if(preferences.OnboardingComplete)
             {

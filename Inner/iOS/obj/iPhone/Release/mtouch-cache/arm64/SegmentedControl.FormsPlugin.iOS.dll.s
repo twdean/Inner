@@ -2757,7 +2757,7 @@ _mono_aot_file_info:
 	.long 72,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 63,62,92,97,171,88,0,235,220,10,228,136,123,20,26,253
+	.byte 243,145,24,119,99,225,2,89,200,133,240,130,222,109,187,172
 	.globl _mono_aot_module_SegmentedControl_FormsPlugin_iOS_info
 	.align 3
 _mono_aot_module_SegmentedControl_FormsPlugin_iOS_info:

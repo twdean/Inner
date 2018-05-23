@@ -2513,7 +2513,7 @@ _mono_aot_file_info:
 	.long 80,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 0,105,208,231,164,190,49,148,59,196,51,135,0,54,55,193
+	.byte 139,63,137,212,227,199,212,190,41,250,97,70,14,250,75,104
 	.globl _mono_aot_module_SegmentedControl_FormsPlugin_Abstractions_info
 	.align 3
 _mono_aot_module_SegmentedControl_FormsPlugin_Abstractions_info:

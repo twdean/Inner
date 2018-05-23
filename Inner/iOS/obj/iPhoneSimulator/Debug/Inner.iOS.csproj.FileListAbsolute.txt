@@ -64,10 +64,6 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.csprojResolveAssemblyReference.cache
-/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.csproj.CoreCompileInputs.cache
-/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.exe
-/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.pdb
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/ibtool/_BundleResourceWithLogicalName.items
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/actool/_PartialAppManifest.items
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/actool/_BundleResourceWithLogicalName.items
@@ -113,3 +109,7 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/optimized/icons8chevronrightwhite.png
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/optimized/chevron_right_gray.png
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.3-11.3/optimized/
+/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.csprojResolveAssemblyReference.cache
+/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.csproj.CoreCompileInputs.cache
+/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.exe
+/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.pdb

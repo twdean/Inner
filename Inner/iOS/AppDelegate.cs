@@ -58,21 +58,18 @@ namespace Inner.iOS
                 ScheduleNotification();
                 formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 
             }
-
-
-
-        }
+       }
 
         private void ScheduleNotification()
         {
-            var prefs = InnerPreferences.GetInnerPreferences();
-            var nextDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
+            var prefs = FileManager.GetPreferences();
+            var nextDate = InnerUtility.GetNextRunDate(prefs.Frequency);
             prefs.NextNotifyDate = nextDate;
-            InnerPreferences.SavePreferences(prefs);
+            FileManager.SavePreferences(prefs);
 
             var DateInSeconds = (nextDate - DateTime.Now).TotalSeconds;
 
