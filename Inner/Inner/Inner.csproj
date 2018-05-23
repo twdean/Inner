@@ -120,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Completed\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -186,6 +190,14 @@
     </Compile>
     <Compile Include="UI\Completed\NotificationsPage.xaml.cs">
       <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataManager.cs" />
+    <Compile Include="Classes\InnerData.cs" />
+    <Compile Include="Classes\InnerNotificationData.cs" />
+    <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="Classes\InnerUtility.cs" />
+    <Compile Include="UI\Completed\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@ namespace Inner.Classes
 
         public InnerData()
         {
+            
         }
     }
 }

@@ -58,11 +58,11 @@ namespace Inner.iOS
                 ScheduleNotification();
                 formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
             }
-            catch(Exception)
+            catch (Exception ex)
             {
-                
+                var exMsg = ex.ToString();
             }
-       }
+        }
 
         private void ScheduleNotification()
         {
