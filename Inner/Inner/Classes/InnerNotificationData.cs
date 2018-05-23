@@ -1,14 +1,14 @@
 ﻿using System;
 namespace Inner.Classes
 {
-    public class InnerContactData
+    public class InnerNotificationData
     {
         public DateTime NotificationDate { get; set; }
         public bool TookAction { get; set; }
         public string ContactMethod { get; set; }
         public InnerContact Contact { get; set; }
 
-        public InnerContactData(DateTime notificationDate, bool tookAction, string method, InnerContact contact)
+        public InnerNotificationData(DateTime notificationDate, bool tookAction, string method, InnerContact contact)
         {
             NotificationDate = notificationDate;
             TookAction = tookAction;
