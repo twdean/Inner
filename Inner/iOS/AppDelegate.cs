@@ -28,7 +28,7 @@ namespace Inner.iOS
             formsApp = new App();
             LoadApplication(formsApp);
 
-            if(options != null)
+            if (options != null)
             {
                 if (options.ContainsKey(UIApplication.LaunchOptionsLocalNotificationKey))
                 {
@@ -52,9 +52,8 @@ namespace Inner.iOS
 
             // reset our badge
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-
-
-            try{
+            try
+            {
                 ScheduleNotification();
                 formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
             }
@@ -78,9 +77,9 @@ namespace Inner.iOS
                 Title = "Inner",
                 Subtitle = "Don't be shy",
                 Body = "Time to talk to someone in your circle today!",
-                Badge = 1
+                Badge = 1,
+                Sound = UNNotificationSound.Default,
             };
-
 
             var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(DateInSeconds, false);
             var request = UNNotificationRequest.FromIdentifier("Inner Apps", content, trigger);

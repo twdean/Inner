@@ -1,67 +1,185 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.InnerProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     BackgroundImage="bluebackground.png">
-   <AbsoluteLayout x:Name="mainLayout">
 
-       
-        <StackLayout x:Name="profileImageLayout"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" 
-                     AbsoluteLayout.LayoutBounds="0.50,0.1,300,300">
-            
-        </StackLayout>
+    <AbsoluteLayout x:Name="mainLayout">
 
-         <Label x:Name="lblFullName" 
-                Text="{Binding Name}" FontSize="20" TextColor="White" XAlign="Center"
-                AbsoluteLayout.LayoutFlags="PositionProportional" 
-            AbsoluteLayout.LayoutBounds="0.5,0.25,360,30"/>
-
-   
-        <StackLayout x:Name="contactOptionsLayout" Orientation="Horizontal" Spacing="35" Padding="25"
-            AbsoluteLayout.LayoutFlags="PositionProportional" 
-            AbsoluteLayout.LayoutBounds="0.5,0.28,350,80"
-            >
-            <Button x:Name="btnSms" Image="icons8speechbubble.png" HeightRequest="50" WidthRequest="50" Clicked="SMS_Clicked" />
-            <Button x:Name="btnPhone" Image="icons8phone.png"  HeightRequest="50" WidthRequest="50" Clicked="Phone_Clicked" />
-            <Button x:Name="btnVideo" Image="icons8videocall.png"  HeightRequest="50" WidthRequest="50" Clicked="Video_Clicked"/>
-            <Button x:Name="btnMail" Image="icons8gmail.png"  HeightRequest="50" WidthRequest="50" Clicked="Email_Clicked"/>
-        </StackLayout>
-
-     
         <StackLayout
-            AbsoluteLayout.LayoutFlags="PositionProportional" 
-            AbsoluteLayout.LayoutBounds="0.5,0.95,350,370"
-            >
-            <Label Text="Enrich your conversation" XAlign="Center" />
-            <ListView 
-            x:Name="lstInnerFeed" 
-            ItemsSource="{Binding FeedItems}"
-            >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                      <Grid Padding="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"></RowDefinition>
-                            <RowDefinition Height="20"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="40"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+            x:Name="profileImageLayout"
+            AbsoluteLayout.LayoutBounds="0.50,0.1,300,300"
+            AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-                        <Label Grid.Row="0" Grid.Column="0" Text="Buttermild and Fried Chicken" LineBreakMode="TailTruncation"></Label>
-                        <Label Grid.Row="1" Grid.Column="0" Text="Popular on Pinterest" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
-                        <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Source="icons8picture.png" Aspect="AspectFill"/>
-                    </Grid>
-                   </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Label
+            x:Name="lblFullName"
+            AbsoluteLayout.LayoutBounds="0.5,0.25,360,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="20"
+            Text="{Binding Name}"
+            TextColor="White"
+            XAlign="Center" />
+
+        <StackLayout
+            x:Name="contactOptionsLayout"
+            Padding="25"
+            AbsoluteLayout.LayoutBounds="0.5,0.28,350,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Orientation="Horizontal"
+            Spacing="35">
+
+            <StackLayout
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                Spacing="15">
+
+                <Image
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Source="icons8speechbubble.png"
+                    WidthRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnSms"
+                            NumberOfTapsRequired="1"
+                            Tapped="btnSms_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Source="icons8phone.png"
+                    WidthRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnPhone"
+                            NumberOfTapsRequired="1"
+                            Tapped="btnPhone_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Source="icons8videocall.png"
+                    WidthRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnVideo"
+                            NumberOfTapsRequired="1"
+                            Tapped="btnVideo_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    BackgroundColor="Transparent"
+                    HeightRequest="48"
+                    Source="icons8gmail.png"
+                    WidthRequest="48">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnEmail"
+                            NumberOfTapsRequired="1"
+                            Tapped="btnEmail_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+
+            <!--<Button
+                x:Name="btnSms"
+                BackgroundColor="Transparent"
+                Clicked="SMS_Clicked"
+                HeightRequest="50"
+                Image="icons8speechbubble.png"
+                WidthRequest="50" />
+
+            <Button
+                x:Name="btnPhone"
+                BackgroundColor="Transparent"
+                Clicked="Phone_Clicked"
+                HeightRequest="50"
+                Image="icons8phone.png"
+                WidthRequest="50" />
+
+            <Button
+                x:Name="btnVideo"
+                BackgroundColor="Transparent"
+                Clicked="Video_Clicked"
+                HeightRequest="50"
+                Image="icons8videocall.png"
+                WidthRequest="50" />
+
+            <Button
+                x:Name="btnMail"
+                BackgroundColor="Transparent"
+                Clicked="Email_Clicked"
+                HeightRequest="50"
+                Image="icons8gmail.png"
+                WidthRequest="50" />-->
+
         </StackLayout>
- 
+
+
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.95,350,370" AbsoluteLayout.LayoutFlags="PositionProportional">
+
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+                    <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+                </OnPlatform>
+            </StackLayout.Margin>
+
+            <Label Text="Enrich your conversation" XAlign="Center">
+                <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+                        <OnPlatform.iOS>0,30,0,0</OnPlatform.iOS>
+                    </OnPlatform>
+                </Label.Margin>
+            </Label>
+
+            <ListView x:Name="lstInnerFeed" ItemsSource="{Binding FeedItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="40" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    LineBreakMode="TailTruncation"
+                                    Text="Buttermild and Fried Chicken" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Font="Small"
+                                    LineBreakMode="TailTruncation"
+                                    Text="Popular on Pinterest"
+                                    TextColor="Gray" />
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    Aspect="AspectFill"
+                                    Source="icons8picture.png" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
     </AbsoluteLayout>
 </ContentPage>

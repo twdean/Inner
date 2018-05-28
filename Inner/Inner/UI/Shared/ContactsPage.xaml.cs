@@ -15,8 +15,6 @@ namespace Inner.UI.Shared
             BindingContext = new ContactsViewModel(new PageService());
 
             InitializeComponent();
-
-           
         }
 
         public ContactsPage(bool isManaging)
@@ -24,10 +22,7 @@ namespace Inner.UI.Shared
 
             _isManaging = isManaging;
             BindingContext = new ContactsViewModel(new PageService());
-
             InitializeComponent();
-
-
         }
 
         void Handle_SearchButtonPressed(object sender, System.EventArgs e)
@@ -37,11 +32,16 @@ namespace Inner.UI.Shared
             lstContacts.BeginRefresh();
 
             if (string.IsNullOrWhiteSpace(keyword))
-                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts;
+                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts1;
             else
-                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower()));
+            {
+                var mContactViewModels = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower())).ToList();
+                var mContactViewModellist = (BindingContext as ContactsViewModel).SetUp(mContactViewModels);
+                lstContacts.ItemsSource = mContactViewModellist;
+            }
+            //lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower()));
 
-            lstContacts.EndRefresh();                                   
+            lstContacts.EndRefresh();
         }
 
         void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
@@ -50,10 +50,15 @@ namespace Inner.UI.Shared
 
             lstContacts.BeginRefresh();
 
-            if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts;
+            if (string.IsNullOrWhiteSpace(keyword))
+                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts1;
             else
-                lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower())); 
+            {
+                var mContactViewModels = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower())).ToList();
+                var mContactViewModellist = (BindingContext as ContactsViewModel).SetUp(mContactViewModels);
+                lstContacts.ItemsSource = mContactViewModellist;
+                //lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts1.Where(x => x.LongTitle.ToLower().Contains(keyword.ToLower()));
+            }//lstContacts.ItemsSource = (BindingContext as ContactsViewModel).Contacts.Where(x => x.FirstName.ToLower().Contains(keyword.ToLower()) || x.LastName.ToLower().Contains(keyword.ToLower()));
 
             lstContacts.EndRefresh();
         }
@@ -61,7 +66,7 @@ namespace Inner.UI.Shared
         void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
             var currentContact = e.Item as ContactViewModel;
-            if(!currentContact.InCircle)
+            if (!currentContact.InCircle)
             {
                 (BindingContext as ContactsViewModel).AddContact(currentContact);
                 //var contacts = (BindingContext as ContactsViewModel).Contacts;
@@ -75,11 +80,10 @@ namespace Inner.UI.Shared
                 //    DisplayAlert("Whoa!", "Looks like you've added your fill of contacts for now", "OK");
                 //}
             }
-            else{
+            else
+            {
                 (BindingContext as ContactsViewModel).AddContact(currentContact);
             }
-           
-           
         }
 
 
@@ -88,12 +92,13 @@ namespace Inner.UI.Shared
             DisplayAlert("Need some help?", "These people should be people your are close to and wish to keep in contact with", "OK");
             var shouldContinue = ShowConfirmation();
 
-            if(shouldContinue.Result)
+            if (shouldContinue.Result)
             {
-                
+
             }
-            else{
-                
+            else
+            {
+
             }
         }
 
@@ -105,16 +110,24 @@ namespace Inner.UI.Shared
 
         async void Finished_Clicked(object sender, System.EventArgs e)
         {
-            await(BindingContext as ContactsViewModel).SaveCircle(_isManaging);
+            try
+            {
+                await (BindingContext as ContactsViewModel).SaveCircle(_isManaging);
+            }
+            catch (System.Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
         async void Cancel_Clicked(object sender, System.EventArgs e)
         {
-            if(_isManaging)
+            if (_isManaging)
             {
                 await Navigation.PopModalAsync(true);
             }
-            else{
+            else
+            {
                 await Navigation.PushAsync(new CreateCirclePage());
             }
 

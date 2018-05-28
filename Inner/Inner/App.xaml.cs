@@ -6,21 +6,29 @@ namespace Inner
 {
     public partial class App : Application
     {
-        public App()
+        public App(int PostId = -1)
         {
             InitializeComponent();
 
             var preferences = FileManager.GetPreferences();
 
-            if(preferences.OnboardingComplete)
+            if (PostId >= 0)
             {
-                MainPage = new NavigationPage(new UI.Completed.ManageTabbedPage());
+                MainPage = new NavigationPage(new LocalNotificationPage());
             }
-            else{
-                MainPage = new NavigationPage(new WelcomePage());
+            else
+            {
+                if (preferences.OnboardingComplete)
+                {
+                    MainPage = new NavigationPage(new UI.Completed.ManageTabbedPage());
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new WelcomePage());
+                }
             }
 
-
+            
         }
 
         protected override void OnStart()

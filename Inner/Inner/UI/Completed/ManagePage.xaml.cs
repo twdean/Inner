@@ -22,7 +22,6 @@ namespace Inner.UI.Completed
 		protected override void OnAppearing()
 		{           
             LoadSummary();
-
 		}
 
 		private void LoadSummary()
@@ -30,7 +29,8 @@ namespace Inner.UI.Completed
             int col = 0;
             int row = 0;
 
-            InnerPrefs = InnerPreferences.GetInnerPreferences();
+            //InnerPrefs = InnerPreferences.GetInnerPreferences();
+            InnerPrefs = FileManager.GetPreferences();
             BindingContext = InnerPrefs;
 
             if (InnerPrefs != null)
@@ -42,35 +42,50 @@ namespace Inner.UI.Completed
                                    
                     foreach (var c in contacts)
                     {
-                        Button btn = new Button()
+                        //Button btn = new Button()
+                        //{
+                        //    Image = "icons8chevronrightwhite.png",
+                        //    VerticalOptions = LayoutOptions.Start,
+                        //    WidthRequest = 65,
+                        //    HeightRequest = 65,
+                        //    BackgroundColor = Color.Transparent,
+                        //};
+
+                        Image btn = new Image()
                         {
-                            Image = "icons8chevronrightwhite.png",
+                            Source = "icons8chevronrightwhite.png",
                             VerticalOptions = LayoutOptions.Start,
-                            WidthRequest = 25,
-                            HeightRequest = 25
-
+                            HorizontalOptions = LayoutOptions.End,
+                            WidthRequest = 28,
+                            HeightRequest = 28,
+                            BackgroundColor = Color.Transparent,
+                            Margin=new Thickness(0,5,10,0),
                         };
+                       // btn.ScaleTo(0.5);
 
+                        TapGestureRecognizer btnClick = new TapGestureRecognizer();
+                        btnClick.NumberOfTapsRequired = 1;
 
-                        btn.Clicked += (sender, e) => {
+                        btnClick.Tapped += (sender,e)=> {
                             var profilePage = new InnerProfilePage(c);
-
-
-                            Navigation.PushAsync(profilePage);    
+                            Navigation.PushAsync(profilePage);
                         };
+                        btn.GestureRecognizers.Add(btnClick);
+                       
+                        //btn.Clicked += (sender, e) => {
+                        //    var profilePage = new InnerProfilePage(c);
+                        //    Navigation.PushAsync(profilePage);    
+                        //};
 
-                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName),TextColor = Color.White, VerticalOptions = LayoutOptions.Start }, col, row);
+                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName),TextColor = Color.White, VerticalOptions = LayoutOptions.Start,Margin=new Thickness(20,5,0,0) }, col, row);
                         grdInnerSummary.Children.Add(btn, ++col, row);
 
                         col = 0;
                         row++;
                     }
-
-                   
                 }
             }
         }
-
       
         void Manage_Clicked(object sender, System.EventArgs e)
         {

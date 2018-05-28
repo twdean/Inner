@@ -1,37 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.Completed.NotificationsPage"
-    BackgroundImage="bluebackground.png"
-    Padding="0,20,0,0">
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    Padding="0,20,0,0"
+    BackgroundImage="bluebackground.png">
 
     <AbsoluteLayout>
-            <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
-         <Label x:Name="lblProfileTitle" Text="Notification Frequency"
-            FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,300,150"/>
-           
-          <controls:SegmentedControl x:Name="segFrequency" TintColor="Blue" SelectedSegment="0" 
-           ValueChanged="Handle_ValueChanged" WidthRequest="350" HorizontalOptions="CenterAndExpand"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
-             >
+        <Label
+            x:Name="lblProfileTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,300,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Notification Frequency"
+            TextColor="White" />
+
+        <controls:SegmentedControl
+            x:Name="segFrequency"
+            AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="CenterAndExpand"
+            SelectedSegment="0"
+            TintColor="Blue"
+            ValueChanged="Handle_ValueChanged"
+            WidthRequest="350">
             <controls:SegmentedControl.Children>
-            <controls:SegmentedControlOption Text="Weekly" />
-            <controls:SegmentedControlOption Text="Bi-Weekly" />
-            <controls:SegmentedControlOption Text="Monthly" />        
-          </controls:SegmentedControl.Children>
+                <controls:SegmentedControlOption Text="Weekly" />
+                <controls:SegmentedControlOption Text="Bi-Weekly" />
+                <controls:SegmentedControlOption Text="Monthly" />
+            </controls:SegmentedControl.Children>
         </controls:SegmentedControl>
 
-        
-        <Button Text="Update" BackgroundColor="Navy"
-               AbsoluteLayout.LayoutFlags="PositionProportional" 
-                AbsoluteLayout.LayoutBounds="0.5,0.75,150,50"
-                Clicked="Update_Clicked"
-               />
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.75,150,50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Navy"
+            Clicked="Update_Clicked"
+            Text="Update" />
     </AbsoluteLayout>
 
 </ContentPage>

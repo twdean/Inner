@@ -36,7 +36,6 @@ namespace Inner.Classes
                 if (folderExists.Result == ExistenceCheckResult.FolderExists)
                 {
                     folder = rootFolder.GetFolderAsync("Inner").Result;
-
                 }
                 else
                 {
@@ -77,7 +76,6 @@ namespace Inner.Classes
             }
 
             return appSettings;
-
         }
 
     }

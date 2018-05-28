@@ -1,34 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.OnboardingCompletePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundImage="bluebackground.png">
 
-     <AbsoluteLayout>
-        <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+    <AbsoluteLayout>
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
-       <Label x:Name="lblCompleteTitle" Text="All Done!" 
-              FontSize="30" TextColor="White" HorizontalTextAlignment="Center"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
-        />
-        <Label x:Name="lblCompleteDesc" Text="You will recieve a gentle notification when it's time to connect with a member of your circle" 
-               FontSize="15" TextColor="White" HorizontalTextAlignment="Center"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.50,270,150" 
-        />
+        <Label
+            x:Name="lblCompleteTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="All Done!"
+            TextColor="White" />
+        <Label
+            x:Name="lblCompleteDesc"
+            AbsoluteLayout.LayoutBounds="0.5,0.50,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="15"
+            HorizontalTextAlignment="Center"
+            Text="You will recieve a gentle notification when it's time to connect with a member of your circle"
+            TextColor="White" />
 
-        <Label x:Name="lblNotification" Text="Your first reminder is on it's way!!" 
-               FontSize="15" HorizontalTextAlignment="Center" IsVisible="false"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.65,270,150" 
-        />
+        <Label
+            x:Name="lblNotification"
+            AbsoluteLayout.LayoutBounds="0.5,0.65,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="15"
+            HorizontalTextAlignment="Center"
+            IsVisible="false"
+            Text="Your first reminder is on it's way!!" />
 
 
-         <Button x:Name="btnStart" Clicked="Handle_Clicked" Text="Start Now" TextColor="White" BackgroundColor="Navy" 
-               FontSize="15" BorderRadius="25"
-               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.70,170,50"
-         />
-      
+        <Button
+            x:Name="btnStart"
+            AbsoluteLayout.LayoutBounds="0.5,0.70,170,50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Navy"
+            BorderRadius="25"
+            Clicked="Handle_Clicked"
+            FontSize="15"
+            Text="Start Now"
+            TextColor="White" />
+
     </AbsoluteLayout>
 
 </ContentPage>

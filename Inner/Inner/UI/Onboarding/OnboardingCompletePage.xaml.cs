@@ -16,25 +16,31 @@ namespace Inner.UI
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
-            //<--TODO Need to send first notification
-            var preferences = InnerPreferences.GetInnerPreferences();
+            try
+            {
+                //<--TODO Need to send first notification
+                //var preferences = InnerPreferences.GetInnerPreferences();
+                var preferences = FileManager.GetPreferences();
 
-            var notificationHelper = DependencyService.Get<INotify>();
-            notificationHelper.GetPermissions();
+                var notificationHelper = DependencyService.Get<INotify>();
+                notificationHelper.GetPermissions();
 
-            notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", 2);
-            preferences.LastRunDate = DateTime.Now;
+                notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", 2);
+                preferences.LastRunDate = DateTime.Now;
 
-            preferences.OnboardingComplete = true;
-            InnerPreferences.SavePreferences(preferences);
-            lblNotification.IsVisible = true;
-            btnStart.Text = "Here is Comes!";
-            btnStart.IsEnabled = false;
-           
+                preferences.OnboardingComplete = true;
+                //InnerPreferences.SavePreferences(preferences);
+                FileManager.SavePreferences(preferences);
+                lblNotification.IsVisible = true;
+                btnStart.Text = "Here is Comes!";
+                btnStart.IsEnabled = false;
 
-
-
-            //<!--TODO Need to call web service to insert data
+                //<!--TODO Need to call web service to insert data
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
     }
 }

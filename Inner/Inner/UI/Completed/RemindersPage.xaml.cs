@@ -23,14 +23,12 @@ namespace Inner.UI.Completed
         public RemindersPage()
         {
             InitializeComponent();
-
-
-
         }
 
         private void LoadSummary()
         {
-            InnerPrefs = InnerPreferences.GetInnerPreferences();
+            //InnerPrefs = InnerPreferences.GetInnerPreferences();
+            InnerPrefs = FileManager.GetPreferences();
             notificationTime.Time = InnerPrefs.NextNotifyTime;
 
             BindingContext = InnerPrefs;
@@ -54,9 +52,11 @@ namespace Inner.UI.Completed
 
                 InnerPrefs.NextNotifyDate = newDate;
 
-                InnerPreferences.SavePreferences(InnerPrefs);
+                //InnerPreferences.SavePreferences(InnerPrefs);
+                FileManager.SavePreferences(InnerPrefs);
 
-                var status = InnerPreferences.UpdateNotifications(InnerPrefs.NextNotifyDate);
+                //var status = InnerPreferences.UpdateNotifications(InnerPrefs.NextNotifyDate);
+                var status = InnerUtility.UpdateNotifications(InnerPrefs.NextNotifyDate);
 
                 if (status)
                 {

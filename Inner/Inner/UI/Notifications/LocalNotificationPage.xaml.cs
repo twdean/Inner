@@ -13,52 +13,117 @@ namespace Inner.UI
         {
             InitializeComponent();
 
-            var prefs = InnerPreferences.GetInnerPreferences();
-            _contact = InnerPreferences.GetInnerContact(prefs.InnerContacts);
+            //var prefs = InnerPreferences.GetInnerPreferences();
+            var prefs = FileManager.GetPreferences();
+            //_contact = InnerPreferences.GetInnerContact(prefs.InnerContacts);
+            _contact = InnerUtility.GetInnerContact(prefs.InnerContacts);
 
-            if(_contact != null)
+            if (_contact != null)
             {
-                var nextNotificationDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
+                //var nextNotificationDate = InnerPreferences.GetNextRunDate(prefs.Frequency);
+                var nextNotificationDate = InnerUtility.GetNextRunDate(prefs.Frequency);
 
                 var messageTitle = string.Format("Give {0} a shout", _contact.FirstName);
                 var message = string.Format("I bet {0} would love to hear from you!", _contact.FirstName);
                 var optionsMessage = "How would you like to connect?";
 
-
                 notificationTitle.Text = messageTitle;
                 notificationDesc.Text = message;
                 optionsDesc.Text = optionsMessage;
             }
-
-         
         }
 
-        void Phone_Clicked(object sender, System.EventArgs e)
+        protected override void OnAppearing()
         {
-            Device.OpenUri(new Uri($"tel:{_contact.PhoneNumber}"));
+            base.OnAppearing();
         }
 
-        void Email_Clicked(object sender, System.EventArgs e)
+        //void Phone_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"tel:{_contact.PhoneNumber}"));
+        //}
+
+        //void Email_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"mailto:{_contact.Email}"));
+        //}
+
+        //void Sms_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+        //}
+
+        //void Video_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+        //}
+
+        //void Later_Clicked(object sender, System.EventArgs e)
+        //{
+        //    DisplayAlert("OK", "We have rescheduled your reminder.", "OK");
+
+        //    Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+        //}
+
+        private void btnPhone_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"mailto:{_contact.Email}"));
+            try
+            {
+                Device.OpenUri(new Uri($"tel:{_contact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Sms_Clicked(object sender, System.EventArgs e)
+        private void btnSms_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+            try
+            {
+                Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Video_Clicked(object sender, System.EventArgs e)
+        private void btnVideo_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+            try
+            {
+                Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-
-        void Later_Clicked(object sender, System.EventArgs e)
+        private void btnMail_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("OK", "We have rescheduled your reminder.", "OK");
+            try
+            {
+                Device.OpenUri(new Uri($"mailto:{_contact.Email}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
+        }
 
-            Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+        private void btnLater_Tapped(object sender, EventArgs e)
+        {
+            try
+            {
+                DisplayAlert("OK", "We have rescheduled your reminder.", "OK");
+                Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
     }
 }

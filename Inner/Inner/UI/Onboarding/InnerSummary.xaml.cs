@@ -14,13 +14,10 @@ namespace Inner.UI
 
             InitializeComponent();
 
-
             //var preferences = InnerPreferences.GetInnerPreferences();
             LoadSummary();
             //lstInnerSummary.ItemsSource = preferences.InnerContacts;
             //BindingContext = preferences.InnerContacts;
-      
-
 
         }
 
@@ -31,18 +28,19 @@ namespace Inner.UI
 
         private void LoadSummary()
         {
-            var preferences = InnerPreferences.GetInnerPreferences();
+            //var preferences = InnerPreferences.GetInnerPreferences();
+            var preferences = FileManager.GetPreferences();
             int col = 0;
             int row = 0;
 
-            if(preferences != null)
+            if (preferences != null)
             {
                 var contacts = preferences.InnerContacts;
-                if(contacts != null)
+                if (contacts != null)
                 {
-                    foreach(var c in contacts)
+                    foreach (var c in contacts)
                     {
-                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName ), TextColor=Color.White}, col, row++);
+                        grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName), TextColor = Color.White }, col, row++);
                     }
 
                 }

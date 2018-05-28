@@ -1,36 +1,136 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    NavigationPage.HasNavigationBar = "false"
-    Padding="0,20,0,0"
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.Shared.ContactsPage"
-    >
-   <StackLayout Padding="10">
-        <SearchBar x:Name="innerSearch" Placeholder="Search for Contacts" SearchButtonPressed="Handle_SearchButtonPressed" TextChanged="Handle_TextChanged" />
-        <ListView 
-            x:Name="lstContacts" 
-            ItemsSource="{Binding Contacts}"
-            SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="0,20,0,0"
+    NavigationPage.HasNavigationBar="false">
+
+    <StackLayout
+        Margin="0"
+        Padding="0"
+        Spacing="0"
+        VerticalOptions="FillAndExpand">
+
+        <SearchBar
+            x:Name="innerSearch"
+            Placeholder="Search for Contacts"
+            SearchButtonPressed="Handle_SearchButtonPressed"
+            TextChanged="Handle_TextChanged" />
+
+        <ListView
+            x:Name="lstContacts"
+            IsGroupingEnabled="True"
             ItemTapped="Handle_ItemTapped"
-            >
+            ItemsSource="{Binding Contacts1}"
+            SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+            SeparatorVisibility="None"
+            VerticalOptions="FillAndExpand">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout HeightRequest="50">
+                                <Label
+                                    Margin="10"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Title}"
+                                    TextColor="Black" />
+                                <BoxView
+                                    HeightRequest="1"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="EndAndExpand"
+                                    Color="LightGray" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="10">
+                        <StackLayout
+                            Padding="10"
+                            Orientation="Horizontal"
+                            VerticalOptions="Center">
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                                <Label Text="{Binding FirstName}"/>
-                                <Label Text="{Binding LastName}"/> 
+                                <Label
+                                    FontAttributes="{Binding FirstFontAttribute}"
+                                    Text="{Binding FirstName}"
+                                    TextColor="Black" />
+                                <Label
+                                    FontAttributes="{Binding LastFontAttribute}"
+                                    Text="{Binding LastName}"
+                                    TextColor="Black" />
                             </StackLayout>
-                            <Image Source="{Binding Image}" HorizontalOptions="EndAndExpand"/>     
+                            <Image HorizontalOptions="EndAndExpand" Source="{Binding Image}" />
                         </StackLayout>
-                   </ViewCell>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Padding="10">
-            <Button Image="icons8cancel.png" HeightRequest="50" WidthRequest="50" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Cancel_Clicked"/>
-            <Button Image="icons8okGreen.png" HeightRequest="50" WidthRequest="50" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Clicked="Finished_Clicked"/>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            ColumnSpacing="0"
+            RowSpacing="0"
+            VerticalOptions="EndAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--<Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="Cancel_Clicked"
+                HeightRequest="50"
+                Image="icons8cancel.png"
+                WidthRequest="50" />
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="3"
+                Grid.ColumnSpan="2"
+                Clicked="Finished_Clicked"
+                HeightRequest="50"
+                Image="icons8okGreen.png"
+                WidthRequest="50" />-->
+
+            <!--
+                AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+                AbsoluteLayout.LayoutFlags="PositionProportional";
+                Scale="0.5"
+            -->
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Clicked="Cancel_Clicked"
+                Image="icons8cancel.png"
+                Scale="0.5"
+                VerticalOptions="StartAndExpand" />
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Clicked="Finished_Clicked"
+                Image="icons8okGreen.png"
+                Scale="0.5"
+                VerticalOptions="StartAndExpand" />
         </Grid>
     </StackLayout>
 </ContentPage>

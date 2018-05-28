@@ -1,40 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.Completed.ManagePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
     BackgroundImage="bluebackground.png">
-     <AbsoluteLayout>
-      <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
 
-         <Label x:Name="lblSummary" Text="Your Circle"
-            FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
-            AbsoluteLayout.LayoutFlags="PositionProportional" 
-            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"/>
-           
- 
-        <BoxView BackgroundColor="White"
-        AbsoluteLayout.LayoutFlags="PositionProportional" 
-                 AbsoluteLayout.LayoutBounds="0.5,0.35,250,2"/>
-        
-        <Grid x:Name="grdInnerSummary" 
-              AbsoluteLayout.LayoutFlags="PositionProportional" 
-              AbsoluteLayout.LayoutBounds="0.4,0.5,280,150">
-        </Grid>
+    <!--<AbsoluteLayout>-->
+    <AbsoluteLayout>
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
-         <BoxView BackgroundColor="White"
-        AbsoluteLayout.LayoutFlags="PositionProportional" 
-                  AbsoluteLayout.LayoutBounds="0.5,0.68,250,2" />
+        <Label
+            x:Name="lblSummary"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Your Circle"
+            TextColor="White" />
 
-       
 
-         <Button Text="Manage" BackgroundColor="Navy"
-               AbsoluteLayout.LayoutFlags="PositionProportional" 
-                AbsoluteLayout.LayoutBounds="0.5,0.78,150,50"
-                Clicked="Manage_Clicked"
-               />
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.5,0.35,250,2"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="White" />
+
+        <!--<Grid
+            x:Name="grdInnerSummary"
+            AbsoluteLayout.LayoutBounds="0.4,0.5,280,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional" />-->
+
+        <Grid
+            x:Name="grdInnerSummary"
+            AbsoluteLayout.LayoutBounds="0.4,0.5,280,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HeightRequest="50" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.5,0.68,250,2"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="White" />
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.78,150,50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Navy"
+            Clicked="Manage_Clicked"
+            Text="Manage" />
 
     </AbsoluteLayout>
 </ContentPage>

@@ -1,45 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.NotificationFrequencySetupPage"
-    BackgroundImage="bluebackground.png"
-    >
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    BackgroundImage="bluebackground.png">
+
+    <AbsoluteLayout>
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
 
-      <AbsoluteLayout>
-            <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+        <Label
+            x:Name="lblFrequencyTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Notifications"
+            TextColor="White" />
 
+        <Label
+            x:Name="lblFrequencyDesc"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="How often would you like to connect with your circle?"
+            TextColor="White" />
 
-        <Label x:Name="lblFrequencyTitle" 
-               Text="Notifications"  
-               FontSize="30" TextColor="White" HorizontalTextAlignment="Center"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
-        />
-        
-        <Label x:Name="lblFrequencyDesc" 
-               Text="How often would you like to connect with your circle?" 
-               TextColor="White" FontSize="20" HorizontalTextAlignment="Center"
-                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
-               />
-        
-        <controls:SegmentedControl x:Name="segFrequency" TintColor="Blue" SelectedSegment="0" 
-           ValueChanged="Handle_ValueChanged" WidthRequest="350" HorizontalOptions="CenterAndExpand"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
-             >
+        <controls:SegmentedControl
+            x:Name="segFrequency"
+            AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="CenterAndExpand"
+            SelectedSegment="0"
+            TintColor="Blue"
+            ValueChanged="Handle_ValueChanged"
+            WidthRequest="350">
             <controls:SegmentedControl.Children>
-            <controls:SegmentedControlOption Text="Weekly" />
-            <controls:SegmentedControlOption Text="Bi-Weekly" />
-            <controls:SegmentedControlOption Text="Monthly" />        
-          </controls:SegmentedControl.Children>
+                <controls:SegmentedControlOption Text="Weekly" />
+                <controls:SegmentedControlOption Text="Bi-Weekly" />
+                <controls:SegmentedControlOption Text="Monthly" />
+            </controls:SegmentedControl.Children>
         </controls:SegmentedControl>
 
-        <Button Image="icons8rightcircularwhite.png" Scale="0.5" Clicked="Next_Clicked"
-               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
-               />
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="Next_Clicked"
+            Image="icons8rightcircularwhite.png"
+            Scale="0.5" />
     </AbsoluteLayout>
-    
-  
+
+
 </ContentPage>
