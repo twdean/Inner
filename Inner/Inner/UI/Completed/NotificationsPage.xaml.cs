@@ -19,7 +19,37 @@ namespace Inner.UI.Completed
             //InnerPrefs = InnerPreferences.GetInnerPreferences();
             InnerPrefs = FileManager.GetPreferences();
 
-            segFrequency.SelectedSegment = InnerPrefs.Frequency;
+            //segFrequency.SelectedSegment = InnerPrefs.Frequency;
+            if (InnerPrefs.Frequency == 0)
+            {
+                lblweekly.FontAttributes = FontAttributes.Bold;
+                lblweekly.TextColor = Color.White;
+                lblBiWeekly.TextColor = Color.WhiteSmoke;
+                lblMonthly.TextColor = Color.WhiteSmoke;
+            }
+            else if (InnerPrefs.Frequency == 1)
+            {
+                lblBiWeekly.FontAttributes = FontAttributes.Bold;
+                lblweekly.TextColor = Color.WhiteSmoke;
+                lblBiWeekly.TextColor = Color.White;
+                lblMonthly.TextColor = Color.WhiteSmoke;
+            }
+            else if (InnerPrefs.Frequency == 2)
+            {
+                lblMonthly.FontAttributes = FontAttributes.Bold;
+                lblweekly.TextColor = Color.WhiteSmoke;
+                lblBiWeekly.TextColor = Color.WhiteSmoke;
+                lblMonthly.TextColor = Color.White;
+            }
+            else
+            {
+                lblweekly.FontAttributes = FontAttributes.Bold;
+                InnerPrefs.Frequency = 0;
+                lblweekly.TextColor = Color.White;
+                lblBiWeekly.TextColor = Color.WhiteSmoke;
+                lblMonthly.TextColor = Color.WhiteSmoke;
+            }
+
 
             BindingContext = InnerPrefs;
         }
@@ -42,7 +72,7 @@ namespace Inner.UI.Completed
                             InnerPrefs.Frequency = 2;
                             break;
                     }
-                
+
                 }
             }
         }
@@ -69,6 +99,56 @@ namespace Inner.UI.Completed
             {
                 DisplayAlert("Oops!", "Reminder schedule did not update succesfully", "OK");
             }
+        }
+
+        private void lblweekly_Tapped(object sender, EventArgs e)
+        {
+            //  var label = (Label)sender;
+            if (InnerPrefs != null)
+            {
+                lblweekly.FontAttributes = FontAttributes.Bold;
+                InnerPrefs.Frequency = 0;
+            }
+            lblweekly.TextColor = Color.White;
+            lblBiWeekly.TextColor = Color.WhiteSmoke;
+            lblMonthly.TextColor = Color.WhiteSmoke;
+
+            lblBiWeekly.FontAttributes = FontAttributes.None;
+            lblMonthly.FontAttributes = FontAttributes.None;
+        }
+
+        private void lblBiWeekly_Tapped(object sender, EventArgs e)
+        {
+            if (InnerPrefs != null)
+            {
+                lblBiWeekly.FontAttributes = FontAttributes.Bold;
+                InnerPrefs.Frequency = 1;
+            }
+            lblweekly.TextColor = Color.WhiteSmoke;
+            lblBiWeekly.TextColor = Color.White;
+            lblMonthly.TextColor = Color.WhiteSmoke;
+
+            lblweekly.FontAttributes = FontAttributes.None;
+            lblMonthly.FontAttributes = FontAttributes.None;
+        }
+
+        private void lblMonthly_Tapped(object sender, EventArgs e)
+        {
+            if (InnerPrefs != null)
+            {
+                lblMonthly.FontAttributes = FontAttributes.Bold;
+                InnerPrefs.Frequency = 2;
+            }
+            lblweekly.TextColor = Color.WhiteSmoke;
+            lblBiWeekly.TextColor = Color.WhiteSmoke;
+            lblMonthly.TextColor = Color.White;
+            lblweekly.FontAttributes = FontAttributes.None;
+            lblBiWeekly.FontAttributes = FontAttributes.None;
+        }
+
+        private void btnBack_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

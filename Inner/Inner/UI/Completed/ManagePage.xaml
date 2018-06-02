@@ -4,10 +4,193 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
-    BackgroundImage="bluebackground.png">
+    BackgroundImage="bluebackground.png"
+    NavigationPage.HasNavigationBar="False">
 
-    <!--<AbsoluteLayout>-->
-    <AbsoluteLayout>
+    <ScrollView>
+        <Grid
+            Margin="30,10,30,10"
+            Padding="0"
+            ColumnSpacing="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <!--<StackLayout
+            Margin="30"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Vertical"
+            Spacing="7"
+            VerticalOptions="FillAndExpand">-->
+
+            <Image
+                x:Name="imgLogo"
+                Grid.Row="0"
+                HeightRequest="72"
+                HorizontalOptions="CenterAndExpand"
+                Source="Logo.png"
+                WidthRequest="72" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="0"
+                Padding="0"
+                Orientation="Vertical"
+                Spacing="3">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="28"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Your Circle"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+
+                <BoxView
+                    BackgroundColor="WhiteSmoke"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+
+            <Grid
+                x:Name="grdInnerSummary"
+                Grid.Row="2"
+                Margin="0,5,0,20"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand" />
+
+            <StackLayout
+                Grid.Row="3"
+                Margin="0"
+                Padding="0"
+                Orientation="Vertical"
+                Spacing="0">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Manage  &gt;"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnManage"
+                            NumberOfTapsRequired="1"
+                            Tapped="btnManage_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <BoxView
+                    Margin="0,0,0,10"
+                    BackgroundColor="WhiteSmoke"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+
+            <Grid
+                Grid.Row="4"
+                Margin="0,10,0,0"
+                Padding="0"
+                ColumnSpacing="3"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!--<StackLayout
+                Margin="15"
+                Orientation="Horizontal"
+                Spacing="10">
+
+                <Label
+                    HorizontalOptions="StartAndExpand"
+                    Text="Next Reminder"
+                    TextColor="White" />
+
+                <Label
+                    x:Name="lblNextReminder"
+                    HorizontalOptions="StartAndExpand"
+                    Text="04/20/2018"
+                    TextColor="White" />
+            </StackLayout>-->
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Last Reminder"
+                    TextColor="WhiteSmoke" />
+
+                <!--  Text="{Binding LastRunDate, StringFormat='\{0: MM/dd/yyyy}'}"  -->
+                <Label
+                    x:Name="lblLastReminder"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding LastRunDate, StringFormat='\{0: MM/dd/yyyy}'}"
+                    TextColor="WhiteSmoke" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Next Reminder"
+                    TextColor="WhiteSmoke" />
+
+                <Label
+                    x:Name="lblNextReminder"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="16"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding NextNotifyDate, StringFormat='\{0: MM/dd/yyyy}'}"
+                    TextColor="WhiteSmoke" />
+
+            </Grid>
+
+            <Label
+                Grid.Row="5"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="StartAndExpand"
+                HorizontalTextAlignment="Start"
+                Text="Frequency  &gt;"
+                TextColor="White"
+                VerticalOptions="StartAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnFrequency"
+                        NumberOfTapsRequired="1"
+                        Tapped="btnFrequency_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!--</StackLayout>-->
+        </Grid>
+    </ScrollView>
+
+    <!--<AbsoluteLayout>
         <Image
             x:Name="imgLogo"
             AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
@@ -23,16 +206,17 @@
             Text="Your Circle"
             TextColor="White" />
 
-
         <BoxView
             AbsoluteLayout.LayoutBounds="0.5,0.35,250,2"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             BackgroundColor="White" />
 
-        <!--<Grid
+    -->
+    <!--<Grid
             x:Name="grdInnerSummary"
             AbsoluteLayout.LayoutBounds="0.4,0.5,280,150"
             AbsoluteLayout.LayoutFlags="PositionProportional" />-->
+    <!--
 
         <Grid
             x:Name="grdInnerSummary"
@@ -52,5 +236,5 @@
             Clicked="Manage_Clicked"
             Text="Manage" />
 
-    </AbsoluteLayout>
+    </AbsoluteLayout>-->
 </ContentPage>

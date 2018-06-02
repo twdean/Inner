@@ -21,7 +21,6 @@ E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.Abstractions
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.xml
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.xml
-E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csprojResolveAssemblyReference.cache
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csproj.CoreCompileInputs.cache
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.App.xaml.g.cs
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.InnerPage.xaml.g.cs
@@ -42,5 +41,6 @@ E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.SettingsPage.xaml.g
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.RemindersPage.xaml.g.cs
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.NotificationsPage.xaml.g.cs
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.ProfilePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csproj.CopyComplete
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.dll
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.pdb

@@ -3,6 +3,6 @@
   <PropertyGroup>
     <SelectedDevice> 5.2" Marshmallow %286.0.0%29 XXHDPI Phone</SelectedDevice>
     <ProjectView>ProjectFiles</ProjectView>
-    <DefaultDevice>Android_Accelerated_x86_Nougat</DefaultDevice>
+    <DefaultDevice>5.2" Marshmallow %286.0.0%29 XXHDPI Phone</DefaultDevice>
   </PropertyGroup>
 </Project>

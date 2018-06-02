@@ -19,7 +19,6 @@ namespace Inner.UI.Shared
 
         public ContactsPage(bool isManaging)
         {
-
             _isManaging = isManaging;
             BindingContext = new ContactsViewModel(new PageService());
             InitializeComponent();

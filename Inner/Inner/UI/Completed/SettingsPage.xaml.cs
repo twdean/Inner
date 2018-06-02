@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inner.Classes;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -10,6 +11,11 @@ namespace Inner.UI.Completed
         public SettingsPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
 
         void Circle_Tapped(object sender, System.EventArgs e)
