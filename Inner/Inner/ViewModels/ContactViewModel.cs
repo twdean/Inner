@@ -31,7 +31,10 @@ namespace Inner.ViewModels
 
         public string Name
         {
-            get => $"{FirstName} {LastName}";
+            get
+            {
+                return FirstName + " " + LastName;
+            }
         }
 
         public string dName

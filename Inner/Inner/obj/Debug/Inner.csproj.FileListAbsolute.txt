@@ -21,6 +21,7 @@ E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.Abstractions
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.xml
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
 E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.xml
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csprojAssemblyReference.cache
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csproj.CoreCompileInputs.cache
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.App.xaml.g.cs
 E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.InnerPage.xaml.g.cs

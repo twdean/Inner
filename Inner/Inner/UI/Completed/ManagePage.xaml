@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
     BackgroundImage="bluebackground.png"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="True">
 
     <ScrollView>
         <Grid
@@ -81,9 +81,23 @@
                     FontSize="20"
                     HorizontalOptions="StartAndExpand"
                     HorizontalTextAlignment="Start"
-                    Text="Manage  &gt;"
                     TextColor="White"
                     VerticalOptions="CenterAndExpand">
+
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                Text="Manage " />
+
+                            <Span
+                                FontAttributes="None"
+                                FontSize="20"
+                                Text="&gt;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
                             x:Name="btnManage"
@@ -175,9 +189,23 @@
                 FontSize="20"
                 HorizontalOptions="StartAndExpand"
                 HorizontalTextAlignment="Start"
-                Text="Frequency  &gt;"
                 TextColor="White"
                 VerticalOptions="StartAndExpand">
+
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Frequency " />
+
+                        <Span
+                            FontAttributes="None"
+                            FontSize="20"
+                            Text="&gt;" />
+                    </FormattedString>
+                </Label.FormattedText>
+
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                         x:Name="btnFrequency"
@@ -237,4 +265,5 @@
             Text="Manage" />
 
     </AbsoluteLayout>-->
+
 </ContentPage>

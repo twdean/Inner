@@ -51,16 +51,34 @@ namespace Inner.UI.Completed
                         //    BackgroundColor = Color.Transparent,
                         //};
 
-                        Image btn = new Image()
+                        //Image btn = new Image()
+                        //{
+                        //    Source = "icons8chevronrightwhite.png",
+                        //    VerticalOptions = LayoutOptions.Start,
+                        //    HorizontalOptions = LayoutOptions.Start,
+                        //    WidthRequest = 20,
+                        //    HeightRequest = 20,
+                        //    BackgroundColor = Color.Transparent,
+                        //    Margin=new Thickness(0,5,0,0),
+                        //};
+
+                        Label btn = new Label()
                         {
-                            Source = "icons8chevronrightwhite.png",
+                            Text=">",
                             VerticalOptions = LayoutOptions.Start,
                             HorizontalOptions = LayoutOptions.Start,
-                            WidthRequest = 20,
-                            HeightRequest = 20,
+                            //WidthRequest = 20,
+                            //HeightRequest = 20,
+                            FontSize=20,
+                            TextColor=Color.WhiteSmoke,
                             BackgroundColor = Color.Transparent,
-                            Margin=new Thickness(0,5,0,0),
                         };
+
+                         if(Device.OS==TargetPlatform.Android)
+                            btn.Margin = new Thickness(0,5,0,0);
+                        else 
+                            btn.Margin = 0;
+
                        // btn.ScaleTo(0.5);
 
                         TapGestureRecognizer btnClick = new TapGestureRecognizer();

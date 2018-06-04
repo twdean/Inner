@@ -13,7 +13,11 @@ namespace Inner.Classes
 
         public string Name
         {
-            get => $"{FirstName} {LastName}"; }
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
 
         public InnerContact()
         {

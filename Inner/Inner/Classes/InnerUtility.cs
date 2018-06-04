@@ -57,12 +57,9 @@ namespace Inner.Classes
                 var notificationHelper = DependencyService.Get<INotify>();
                 notificationHelper.ClearAllNotifications();
 
-
                 var nextRunTime = (newNotificationDate - DateTime.Now).TotalSeconds;
 
-
                 notificationHelper.SendNotification("It's Time!", "Lets get you in touch with someone from your circle.", (long)nextRunTime);
-
 
                 return true;
             }

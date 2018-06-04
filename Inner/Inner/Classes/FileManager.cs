@@ -74,7 +74,6 @@ namespace Inner.Classes
             {
                 var msg = ex.ToString();
             }
-
             return appSettings;
         }
 

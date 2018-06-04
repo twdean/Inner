@@ -14,15 +14,15 @@ namespace Inner.UI.Completed
             set;
         }
 
-        protected override void OnAppearing()
-        {
-            LoadSummary();
-
-        }
-
         public RemindersPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            notificationDate.Date = DateTime.Now.Date; ;
+            LoadSummary();
         }
 
         private void LoadSummary()

@@ -97,7 +97,8 @@
             AbsoluteLayout.LayoutFlags="PositionProportional"
             BackgroundColor="Navy"
             Clicked="Update_Clicked"
-            Text="Update" />
+            Text="Update"
+            TextColor="White" />
     </AbsoluteLayout>
 
 </ContentPage>

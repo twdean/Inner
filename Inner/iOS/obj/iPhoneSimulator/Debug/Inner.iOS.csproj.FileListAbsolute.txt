@@ -76,4 +76,3 @@ E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.csproj.CoreCom
 E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.csproj.CopyComplete
 E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.exe
 E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.pdb
-E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Inner.dll.mdb

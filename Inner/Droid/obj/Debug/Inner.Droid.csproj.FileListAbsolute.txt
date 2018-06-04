@@ -102,6 +102,7 @@ E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\icons8about.png
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\icons8dashboard.png
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\icons8chevronrightwhite.png
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\chevron_right_gray.png
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\iconback24.png
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\R.cs.flag
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\R.txt
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\uploadflags.txt
@@ -174,10 +175,7 @@ E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Transactions.pdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Web.Services.pdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.Linq.pdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.pdb
-E:\Twdean_Workspace\Inner\Droid\obj\Debug\res\drawable\iconback24.png
 E:\Twdean_Workspace\Inner\Droid\bin\Debug\Inner.Droid.dll
-E:\Twdean_Workspace\Inner\Inner\bin\Debug\Inner.dll
-E:\Twdean_Workspace\Inner\Droid\bin\Debug\Inner.dll.mdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\linksrc\Inner.Droid.dll.mdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 E:\Twdean_Workspace\Inner\Droid\obj\Debug\linksrc\ImageCircle.Forms.Plugin.Android.dll.mdb
