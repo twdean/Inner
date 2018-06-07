@@ -15,6 +15,7 @@
             HorizontalOptions="FillAndExpand"
             RowSpacing="0"
             VerticalOptions="FillAndExpand">
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="70" />

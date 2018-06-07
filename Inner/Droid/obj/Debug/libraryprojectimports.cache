@@ -30,14 +30,12 @@
     <ResolvedResourceDirectory>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\23\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\24\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\26\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\6\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\lp\6\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\8\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\10\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\21\jl\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>obj\Debug\lp\6\jl\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
@@ -51,6 +49,5 @@
     <ResolvedResourceDirectoryStamp>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\23.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\24.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\26.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>E:\Twdean_Workspace\Inner\Droid\obj\Debug\lp\6.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
