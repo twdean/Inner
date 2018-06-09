@@ -30,7 +30,7 @@ namespace Inner.UI.Completed
             int col = 0;
             int row = 0;
 
-            InnerPrefs = InnerPreferences.GetInnerPreferences();
+            InnerPrefs = FileManager.GetPreferences();
             BindingContext = InnerPrefs;
 
             if (InnerPrefs != null)

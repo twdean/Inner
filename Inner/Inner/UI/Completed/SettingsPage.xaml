@@ -15,15 +15,6 @@
                 </ViewCell>
           
             </TableSection>
-            <TableSection Title="Reminders">
-                 <ViewCell Tapped="Reminders_Tapped">
-                     <Grid Padding="13, 0">
-                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Schedule" VerticalOptions="Center"/>
-                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
-                    </Grid>
-                </ViewCell>
-               
-            </TableSection>
 
             <TableSection Title="Notifications">
                 <ViewCell Tapped="Notifications_Tapped">
@@ -32,9 +23,22 @@
                         <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
                     </Grid>
                 </ViewCell>
-                 
+                    <ViewCell Tapped="Reminders_Tapped">
+                     <Grid Padding="13, 0">
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Schedule" VerticalOptions="Center"/>
+                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
+                    </Grid>
+                </ViewCell>
             </TableSection>
-
+            <TableSection Title="Personal">
+                 <ViewCell Tapped="Profile_Tapped">
+                     <Grid Padding="13, 0">
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Profile" VerticalOptions="Center"/>
+                        <Image Source="chevron_right_gray.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" Scale=".5"/>
+                    </Grid>
+                </ViewCell>
+               
+            </TableSection>
            
         </TableRoot>
     </TableView>

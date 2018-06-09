@@ -1,5 +1,39 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Inner.UI.Completed.DashboardPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Inner.UI.Completed.DashboardPage"
+    BackgroundImage="bluebackground.png"
+    Padding="0,20,0,0">
+
+    <AbsoluteLayout>
+            <Image Source="Logo.png" x:Name="imgLogo"
+               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+
+         <Label x:Name="lblAbout" Text="Dashboard"
+            FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
+            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"/>
+           
+          <Grid BackgroundColor="Teal"
+             AbsoluteLayout.LayoutFlags="PositionProportional" 
+            AbsoluteLayout.LayoutBounds="0.3,0.5,350,150">
+            <Label Text="Notifications Recieved " TextColor="White" FontSize="15" Grid.Row="0" Grid.Column="0" />
+            <Label Text="15" TextColor="White" FontSize="15" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Notifications Acted On " TextColor="White" FontSize="15" Grid.Row="1" Grid.Column="0" />
+            <Label Text="10" TextColor="White" FontSize="15" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="Most Popular Channel" TextColor="White" FontSize="15" Grid.Row="2" Grid.Column="0" />
+            <Label Text="Email" TextColor="White" FontSize="15" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="Most Popular Day" TextColor="White" FontSize="15" Grid.Row="3" Grid.Column="0" />
+            <Label Text="Tuesday" TextColor="White" FontSize="15" Grid.Row="3" Grid.Column="1"/>
+
+            
+            <Label Text="Engagement Rate " TextColor="White" FontSize="15" Grid.Row="4" Grid.Column="0" />
+            <Label Text="66% (10/15)" TextColor="White" FontSize="15" Grid.Row="4" Grid.Column="1"/>
+      
+         </Grid>
+    </AbsoluteLayout>
+
 </ContentPage>

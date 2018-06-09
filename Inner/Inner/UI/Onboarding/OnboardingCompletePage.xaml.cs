@@ -17,7 +17,7 @@ namespace Inner.UI
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             //<--TODO Need to send first notification
-            var preferences = InnerPreferences.GetInnerPreferences();
+            var preferences = FileManager.GetPreferences();
 
             var notificationHelper = DependencyService.Get<INotify>();
             notificationHelper.GetPermissions();
@@ -26,7 +26,7 @@ namespace Inner.UI
             preferences.LastRunDate = DateTime.Now;
 
             preferences.OnboardingComplete = true;
-            InnerPreferences.SavePreferences(preferences);
+            FileManager.SavePreferences(preferences);
             lblNotification.IsVisible = true;
             btnStart.Text = "Here is Comes!";
             btnStart.IsEnabled = false;

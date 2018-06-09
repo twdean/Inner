@@ -16,7 +16,7 @@ namespace Inner.UI.Completed
         {
             InitializeComponent();
 
-            InnerPrefs = InnerPreferences.GetInnerPreferences();
+            InnerPrefs = FileManager.GetPreferences();
 
             segFrequency.SelectedSegment = InnerPrefs.Frequency;
 
@@ -49,12 +49,12 @@ namespace Inner.UI.Completed
         void Update_Clicked(object sender, EventArgs e)
         {
             var notificationTime = InnerPrefs.NextNotifyTime;
-            var nextNotificationDate = InnerPreferences.GetNextRunDate(InnerPrefs.Frequency);
+            var nextNotificationDate = InnerUtility.GetNextRunDate(InnerPrefs.Frequency);
             InnerPrefs.NextNotifyDate = new DateTime(nextNotificationDate.Year, nextNotificationDate.Month, nextNotificationDate.Day, notificationTime.Hours, notificationTime.Minutes, 0);
 
-            InnerPreferences.SavePreferences(InnerPrefs);
+            FileManager.SavePreferences(InnerPrefs);
 
-            var status = InnerPreferences.UpdateNotifications(InnerPrefs.NextNotifyDate);
+            var status = InnerUtility.UpdateNotifications(InnerPrefs.NextNotifyDate);
 
             if (status)
             {

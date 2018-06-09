@@ -11,5 +11,10 @@ namespace Inner.UI.Completed
         {
             InitializeComponent();
         }
+
+        void Update_Clicked(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

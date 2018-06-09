@@ -30,5 +30,11 @@ namespace Inner.UI.Completed
             NotificationsPage notificationsPage = new NotificationsPage();
             Navigation.PushAsync(notificationsPage, true);
         }
+
+        void Profile_Tapped(object sender, System.EventArgs e)
+        {
+            ProfilePage profilePage = new ProfilePage();
+            Navigation.PushAsync(profilePage, true);
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace Inner.UI
 
         private void LoadSummary()
         {
-            var preferences = InnerPreferences.GetInnerPreferences();
+            var preferences = FileManager.GetPreferences();
             int col = 0;
             int row = 0;
 
