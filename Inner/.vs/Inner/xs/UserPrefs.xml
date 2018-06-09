@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{86963E75-854D-48D9-AD2F-E1BE172878BB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Inner/Classes/InnerNotificationData.cs">
+    <Files>
+      <File FileName="Inner/UI/Completed/DashboardPage.xaml" Line="21" Column="92" />
+      <File FileName="Inner/UI/Completed/RemindersPage.xaml" Line="33" Column="17" />
+      <File FileName="Inner/Classes/InnerNotificationData.cs" Line="23" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Notifications/LocalNotificationPage.xaml.cs" relfile="Inner/UI/Notifications/LocalNotificationPage.xaml.cs" line="44" column="1" />
+      <Breakpoint file="/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Notifications/LocalNotificationPage.xaml.cs" relfile="Inner/UI/Notifications/LocalNotificationPage.xaml.cs" line="53" column="1" />
+      <Breakpoint file="/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Notifications/LocalNotificationPage.xaml.cs" relfile="Inner/UI/Notifications/LocalNotificationPage.xaml.cs" line="62" column="1" />
+      <Breakpoint file="/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Notifications/LocalNotificationPage.xaml.cs" relfile="Inner/UI/Notifications/LocalNotificationPage.xaml.cs" line="81" column="1" />
+      <Breakpoint file="/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Completed/DashboardPage.xaml.cs" relfile="Inner/UI/Completed/DashboardPage.xaml.cs" line="14" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Inner.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" automaticSigning="False" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Inner.Droid PreferredExecutionTarget="Android.Nexus 4 (Marshmallow)" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MultiItemStartupConfigurations />
+</Properties>
