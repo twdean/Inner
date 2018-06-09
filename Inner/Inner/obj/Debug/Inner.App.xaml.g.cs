@@ -11,7 +11,11 @@
 namespace Inner {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/App.xaml")]
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\App.xaml")]
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

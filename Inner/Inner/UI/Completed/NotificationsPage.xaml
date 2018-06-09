@@ -1,37 +1,283 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.Completed.NotificationsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    Padding="0,5,0,0"
     BackgroundImage="bluebackground.png"
-    Padding="0,20,0,0">
+    NavigationPage.HasNavigationBar="False">
 
-    <AbsoluteLayout>
-            <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+    <ScrollView>
+        <StackLayout
+            Margin="20,0,20,0"
+            Orientation="Vertical"
+            Spacing="20">
 
-         <Label x:Name="lblProfileTitle" Text="Notification Frequency"
-            FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,300,150"/>
-           
-          <controls:SegmentedControl x:Name="segFrequency" TintColor="Blue" SelectedSegment="0" 
-           ValueChanged="Handle_ValueChanged" WidthRequest="350" HorizontalOptions="CenterAndExpand"
-           AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
-             >
+            <Grid
+                Margin="0"
+                Padding="0"
+                ColumnSpacing="0"
+                RowSpacing="0"
+                VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--<Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                ColumnSpacing="0"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand"
+                WidthRequest="50">
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="btnBack_Tapped" />
+                </Grid.GestureRecognizers>
+
+                -->
+
+                <!--<Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HeightRequest="24"
+                    HorizontalOptions="StartAndExpand"
+                    Source="iconBack24.png"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="24">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="btnBack_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>-->
+                <!-- </Grid>-->
+
+                <Label
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    Text="Frequency"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="Transparent"
+                    Clicked="btnBack_Tapped"
+                    HorizontalOptions="StartAndExpand"
+                    Image="iconBack24.png"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Button.HeightRequest>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="24"
+                            iOS="20" />
+                    </Button.HeightRequest>
+
+                    <Button.WidthRequest>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="24"
+                            iOS="20" />
+                    </Button.WidthRequest>
+                </Button>
+
+                <BoxView
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="30,0,30,0"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    Color="White" />
+
+            </Grid>
+
+            <StackLayout
+                Margin="0"
+                HeightRequest="100"
+                Orientation="Horizontal">
+                <Label
+                    x:Name="lblweekly"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Weekly"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblweekly_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    x:Name="lblBiWeekly"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Bi-Weekly"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblBiWeekly_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    x:Name="lblMonthly"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Monthly"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="lblMonthly_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+            <!--<StackLayout
+            Margin="15"
+            Orientation="Horizontal"
+            Spacing="10">
+
+            <Label
+                HorizontalOptions="StartAndExpand"
+                Text="Last Reminder"
+                TextColor="White" />
+
+            <Label
+                x:Name="lblLastReminder"
+                HorizontalOptions="StartAndExpand"
+                Text="04/16/2018"
+                TextColor="White" />
+        </StackLayout>-->
+
+            <Grid
+                Margin="30,0,30,0"
+                Padding="0"
+                ColumnSpacing="5"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!--<StackLayout
+                Margin="15"
+                Orientation="Horizontal"
+                Spacing="10">
+
+                <Label
+                    HorizontalOptions="StartAndExpand"
+                    Text="Next Reminder"
+                    TextColor="White" />
+
+                <Label
+                    x:Name="lblNextReminder"
+                    HorizontalOptions="StartAndExpand"
+                    Text="04/20/2018"
+                    TextColor="White" />
+            </StackLayout>-->
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Last Reminder"
+                    TextColor="WhiteSmoke" />
+
+                <Label
+                    x:Name="lblLastReminder"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding LastRunDate, StringFormat='\{0: MM/dd/yyyy}'}"
+                    TextColor="WhiteSmoke" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Next Reminder"
+                    TextColor="WhiteSmoke" />
+
+                <Label
+                    x:Name="lblNextReminder"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalOptions="StartAndExpand"
+                    Text="{Binding NextNotifyDate, StringFormat='\{0: MM/dd/yyyy}'}"
+                    TextColor="WhiteSmoke" />
+
+            </Grid>
+
+            <Button
+                x:Name="btnUpdate"
+                BackgroundColor="Navy"
+                Clicked="Update_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Update"
+                TextColor="White">
+
+                <!--<Button.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" iOS="100" />
+            </Button.WidthRequest>-->
+            </Button>
+
+        </StackLayout>
+    </ScrollView>
+
+    <!--<AbsoluteLayout>
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
+
+        <Label
+            x:Name="lblProfileTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,300,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Notification Frequency"
+            TextColor="White" />
+
+        <controls:SegmentedControl
+            x:Name="segFrequency"
+            AbsoluteLayout.LayoutBounds="0.5,0.55,250,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="CenterAndExpand"
+            SelectedSegment="0"
+            ValueChanged="Handle_ValueChanged"
+            WidthRequest="350">
             <controls:SegmentedControl.Children>
-            <controls:SegmentedControlOption Text="Weekly" />
-            <controls:SegmentedControlOption Text="Bi-Weekly" />
-            <controls:SegmentedControlOption Text="Monthly" />        
-          </controls:SegmentedControl.Children>
+                <controls:SegmentedControlOption Text="Weekly" />
+                <controls:SegmentedControlOption Text="Bi-Weekly" />
+                <controls:SegmentedControlOption Text="Monthly" />
+            </controls:SegmentedControl.Children>
         </controls:SegmentedControl>
 
-        
-        <Button Text="Update" BackgroundColor="Navy"
-               AbsoluteLayout.LayoutFlags="PositionProportional" 
-                AbsoluteLayout.LayoutBounds="0.5,0.75,150,50"
-                Clicked="Update_Clicked"
-               />
-    </AbsoluteLayout>
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.75,150,50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Navy"
+            Clicked="Update_Clicked"
+            Text="Update" />
+    </AbsoluteLayout>-->
 
 </ContentPage>

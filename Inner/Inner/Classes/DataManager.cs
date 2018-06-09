@@ -23,7 +23,6 @@ namespace Inner.Classes
 
         public static InnerData GetNotificationData()
         {
-
             InnerData innerData = null;
 
             try
@@ -61,14 +60,12 @@ namespace Inner.Classes
                     innerData = new InnerData
                     {
                         NotificationDataPoints = new Collection<InnerNotificationData>()
-                        
                     };
                 }
                 else
                 {
                     innerData = JsonConvert.DeserializeObject<InnerData>(dataJson);
                 }
-
             }
             catch (Exception ex)
             {

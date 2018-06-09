@@ -15,9 +15,11 @@ namespace Inner.UI
 
         async void Next_Clicked(object sender, System.EventArgs e)
         {
+            //var preferences = InnerPreferences.GetInnerPreferences();
             var preferences = FileManager.GetPreferences();
             preferences.Frequency = Frequency;
 
+            //InnerPreferences.SavePreferences(preferences);
             FileManager.SavePreferences(preferences);
 
             await Navigation.PushAsync(new EmailSetupPage());

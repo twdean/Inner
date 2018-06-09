@@ -14,7 +14,11 @@ public class MenuItemCompat_OnActionExpandListenerImplementor
 			"n_onMenuItemActionCollapse:(Landroid/view/MenuItem;)Z:GetOnMenuItemActionCollapse_Landroid_view_MenuItem_Handler:Android.Support.V4.View.MenuItemCompat/IOnActionExpandListenerInvoker, Xamarin.Android.Support.Compat\n" +
 			"n_onMenuItemActionExpand:(Landroid/view/MenuItem;)Z:GetOnMenuItemActionExpand_Landroid_view_MenuItem_Handler:Android.Support.V4.View.MenuItemCompat/IOnActionExpandListenerInvoker, Xamarin.Android.Support.Compat\n" +
 			"";
+<<<<<<< HEAD
 		mono.android.Runtime.register ("Android.Support.V4.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MenuItemCompat_OnActionExpandListenerImplementor.class, __md_methods);
+=======
+		mono.android.Runtime.register ("Android.Support.V4.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.Android.Support.Compat", MenuItemCompat_OnActionExpandListenerImplementor.class, __md_methods);
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 
@@ -22,7 +26,11 @@ public class MenuItemCompat_OnActionExpandListenerImplementor
 	{
 		super ();
 		if (getClass () == MenuItemCompat_OnActionExpandListenerImplementor.class)
+<<<<<<< HEAD
 			mono.android.TypeManager.Activate ("Android.Support.V4.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+=======
+			mono.android.TypeManager.Activate ("Android.Support.V4.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.Android.Support.Compat", "", this, new java.lang.Object[] {  });
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 

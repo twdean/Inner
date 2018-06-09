@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/Inner.Droid.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/FormsViewGroup.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/ImageCircle.Forms.Plugin.Abstractions.dll
@@ -82,3 +83,87 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/System.Xml.ReaderWriter.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/System.Linq.Expressions.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Droid/obj/Debug/android/assets/System.Dynamic.Runtime.dll
+=======
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Inner.Droid.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\FormsViewGroup.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Android.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Inner.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Java.Interop.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Mono.Android.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\mscorlib.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Newtonsoft.Json.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\PCLStorage.Abstractions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\PCLStorage.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Plugin.LocalNotifications.Abstractions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Plugin.LocalNotifications.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\SegmentedControl.FormsPlugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\SegmentedControl.FormsPlugin.Android.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Core.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Annotations.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Compat.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Core.UI.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Core.Utils.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Fragment.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Media.Compat.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Transition.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.CardView.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.MediaRouter.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.Palette.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Diagnostics.Debug.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Collections.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Threading.Tasks.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Linq.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.ObjectModel.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Net.Http.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Net.Primitives.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.Extensions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Threading.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Text.RegularExpressions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Text.Encoding.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Reflection.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Linq.Expressions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Reflection.Primitives.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Dynamic.Runtime.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Reflection.Extensions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\netstandard.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Data.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Numerics.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Transactions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Diagnostics.StackTrace.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Globalization.Extensions.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.IO.Compression.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.IO.Compression.FileSystem.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Xml.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Security.Cryptography.Algorithms.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Security.SecureString.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Web.Services.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.Linq.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.XPath.XDocument.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.IO.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Resources.ResourceManager.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\Mono.Security.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Globalization.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.ComponentModel.dll
+E:\Twdean_Workspace\Inner\Droid\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 drawable-hdpi/plugin_lc_smallicon.png;drawable-hdpi/plugin_lc_smallicon.png
 drawable-hdpi-v11/plugin_lc_smallicon.png;drawable-hdpi-v11/plugin_lc_smallicon.png
 drawable-mdpi/plugin_lc_smallicon.png;drawable-mdpi/plugin_lc_smallicon.png
@@ -8,3 +9,15 @@ drawable-xxhdpi/plugin_lc_smallicon.png;drawable-xxhdpi/plugin_lc_smallicon.png
 drawable-xxhdpi-v11/plugin_lc_smallicon.png;drawable-xxhdpi-v11/plugin_lc_smallicon.png
 drawable-xxxhdpi/plugin_lc_smallicon.png;drawable-xxxhdpi/plugin_lc_smallicon.png
 drawable-xxxhdpi-v11/plugin_lc_smallicon.png;drawable-xxxhdpi-v11/plugin_lc_smallicon.png
+=======
+drawable-hdpi/plugin_lc_smallicon.png;drawable-hdpi/plugin_lc_smallicon.png
+drawable-hdpi-v11/plugin_lc_smallicon.png;drawable-hdpi-v11/plugin_lc_smallicon.png
+drawable-mdpi/plugin_lc_smallicon.png;drawable-mdpi/plugin_lc_smallicon.png
+drawable-mdpi-v11/plugin_lc_smallicon.png;drawable-mdpi-v11/plugin_lc_smallicon.png
+drawable-xhdpi/plugin_lc_smallicon.png;drawable-xhdpi/plugin_lc_smallicon.png
+drawable-xhdpi-v11/plugin_lc_smallicon.png;drawable-xhdpi-v11/plugin_lc_smallicon.png
+drawable-xxhdpi/plugin_lc_smallicon.png;drawable-xxhdpi/plugin_lc_smallicon.png
+drawable-xxhdpi-v11/plugin_lc_smallicon.png;drawable-xxhdpi-v11/plugin_lc_smallicon.png
+drawable-xxxhdpi/plugin_lc_smallicon.png;drawable-xxxhdpi/plugin_lc_smallicon.png
+drawable-xxxhdpi-v11/plugin_lc_smallicon.png;drawable-xxxhdpi-v11/plugin_lc_smallicon.png
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

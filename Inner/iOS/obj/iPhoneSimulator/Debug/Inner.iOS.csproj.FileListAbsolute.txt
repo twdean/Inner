@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/Inner.iOS.exe
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/Inner.iOS.pdb
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/bin/iPhoneSimulator/Debug/ImageCircle.Forms.Plugin.Abstractions.dll
@@ -113,3 +114,83 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.csproj.CoreCompileInputs.cache
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.exe
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/iOS/obj/iPhoneSimulator/Debug/Inner.iOS.pdb
+=======
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Inner.iOS.exe
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Inner.iOS.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ImageCircle.Forms.Plugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ImageCircle.Forms.Plugin.iOS.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Inner.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\PCLStorage.Abstractions.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\PCLStorage.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.Abstractions.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\SegmentedControl.FormsPlugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\SegmentedControl.FormsPlugin.iOS.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Inner.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll.mdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll.mdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll.mdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\PCLStorage.Abstractions.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\PCLStorage.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.Abstractions.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ImageCircle.Forms.Plugin.Abstractions.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ImageCircle.Forms.Plugin.iOS.xml
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\optimized\
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.csprojAssemblyReference.cache
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.csproj.CoreCompileInputs.cache
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.csproj.CopyComplete
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.exe
+E:\Twdean_Workspace\Inner\iOS\obj\iPhoneSimulator\Debug\Inner.iOS.pdb
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

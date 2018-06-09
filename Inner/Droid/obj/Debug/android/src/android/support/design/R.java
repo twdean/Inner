@@ -2828,6 +2828,7 @@ containing a value of this type.
         public static int abc_textfield_search_material=0x7f020051;
         public static int abc_vector_test=0x7f020052;
         public static int avd_hide_password=0x7f020053;
+<<<<<<< HEAD
         public static int avd_hide_password_1=0x7f020135;
         public static int avd_hide_password_2=0x7f020136;
         public static int avd_hide_password_3=0x7f020137;
@@ -2835,6 +2836,15 @@ containing a value of this type.
         public static int avd_show_password_1=0x7f020138;
         public static int avd_show_password_2=0x7f020139;
         public static int avd_show_password_3=0x7f02013a;
+=======
+        public static int avd_hide_password_1=0x7f020136;
+        public static int avd_hide_password_2=0x7f020137;
+        public static int avd_hide_password_3=0x7f020138;
+        public static int avd_show_password=0x7f020054;
+        public static int avd_show_password_1=0x7f020139;
+        public static int avd_show_password_2=0x7f02013a;
+        public static int avd_show_password_3=0x7f02013b;
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         public static int background2=0x7f020055;
         public static int bluebackground=0x7f020056;
         public static int chevron_right_gray=0x7f020057;
@@ -2990,6 +3000,7 @@ containing a value of this type.
         public static int ic_vol_type_tv_dark=0x7f0200ed;
         public static int ic_vol_type_tv_light=0x7f0200ee;
         public static int icon=0x7f0200ef;
+<<<<<<< HEAD
         public static int icons8about=0x7f0200f0;
         public static int icons8accessibility2=0x7f0200f1;
         public static int icons8add=0x7f0200f2;
@@ -3059,6 +3070,78 @@ containing a value of this type.
         public static int segmented_control_background=0x7f020130;
         public static int segmented_control_first_background=0x7f020131;
         public static int segmented_control_last_background=0x7f020132;
+=======
+        public static int iconback24=0x7f0200f0;
+        public static int icons8about=0x7f0200f1;
+        public static int icons8accessibility2=0x7f0200f2;
+        public static int icons8add=0x7f0200f3;
+        public static int icons8calendarplus=0x7f0200f4;
+        public static int icons8calendarplusmall=0x7f0200f5;
+        public static int icons8cancel=0x7f0200f6;
+        public static int icons8checked=0x7f0200f7;
+        public static int icons8checkedgreen=0x7f0200f8;
+        public static int icons8chevronrightround=0x7f0200f9;
+        public static int icons8chevronrightwhite=0x7f0200fa;
+        public static int icons8dashboard=0x7f0200fb;
+        public static int icons8gmail=0x7f0200fc;
+        public static int icons8info=0x7f0200fd;
+        public static int icons8last24hours=0x7f0200fe;
+        public static int icons8message=0x7f0200ff;
+        public static int icons8ok=0x7f020100;
+        public static int icons8okgreen=0x7f020101;
+        public static int icons8phone=0x7f020102;
+        public static int icons8picture=0x7f020103;
+        public static int icons8pluswhite=0x7f020104;
+        public static int icons8reminder=0x7f020105;
+        public static int icons8right_circular=0x7f020106;
+        public static int icons8right_round=0x7f020107;
+        public static int icons8rightcircularwhite=0x7f020108;
+        public static int icons8rightround=0x7f020109;
+        public static int icons8save=0x7f02010a;
+        public static int icons8settings=0x7f02010b;
+        public static int icons8speechbubble=0x7f02010c;
+        public static int icons8speed=0x7f02010d;
+        public static int icons8videocall=0x7f02010e;
+        public static int inner=0x7f02010f;
+        public static int logo=0x7f020110;
+        public static int mr_button_connected_dark=0x7f020111;
+        public static int mr_button_connected_light=0x7f020112;
+        public static int mr_button_connecting_dark=0x7f020113;
+        public static int mr_button_connecting_light=0x7f020114;
+        public static int mr_button_dark=0x7f020115;
+        public static int mr_button_light=0x7f020116;
+        public static int mr_dialog_close_dark=0x7f020117;
+        public static int mr_dialog_close_light=0x7f020118;
+        public static int mr_dialog_material_background_dark=0x7f020119;
+        public static int mr_dialog_material_background_light=0x7f02011a;
+        public static int mr_group_collapse=0x7f02011b;
+        public static int mr_group_expand=0x7f02011c;
+        public static int mr_media_pause_dark=0x7f02011d;
+        public static int mr_media_pause_light=0x7f02011e;
+        public static int mr_media_play_dark=0x7f02011f;
+        public static int mr_media_play_light=0x7f020120;
+        public static int mr_media_stop_dark=0x7f020121;
+        public static int mr_media_stop_light=0x7f020122;
+        public static int mr_vol_type_audiotrack_dark=0x7f020123;
+        public static int mr_vol_type_audiotrack_light=0x7f020124;
+        public static int navigation_empty_icon=0x7f020125;
+        public static int notification_action_background=0x7f020126;
+        public static int notification_bg=0x7f020127;
+        public static int notification_bg_low=0x7f020128;
+        public static int notification_bg_low_normal=0x7f020129;
+        public static int notification_bg_low_pressed=0x7f02012a;
+        public static int notification_bg_normal=0x7f02012b;
+        public static int notification_bg_normal_pressed=0x7f02012c;
+        public static int notification_icon_background=0x7f02012d;
+        public static int notification_template_icon_bg=0x7f020134;
+        public static int notification_template_icon_low_bg=0x7f020135;
+        public static int notification_tile_bg=0x7f02012e;
+        public static int notify_panel_notification_icon_bg=0x7f02012f;
+        public static int plugin_lc_smallicon=0x7f020130;
+        public static int segmented_control_background=0x7f020131;
+        public static int segmented_control_first_background=0x7f020132;
+        public static int segmented_control_last_background=0x7f020133;
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
     }
     public static final class id {
         public static int SegControl=0x7f0900b2;

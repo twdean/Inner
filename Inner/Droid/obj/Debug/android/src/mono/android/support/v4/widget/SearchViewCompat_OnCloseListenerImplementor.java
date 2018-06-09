@@ -13,7 +13,11 @@ public class SearchViewCompat_OnCloseListenerImplementor
 		__md_methods = 
 			"n_onClose:()Z:GetOnCloseHandler:Android.Support.V4.Widget.SearchViewCompat/IOnCloseListenerInvoker, Xamarin.Android.Support.Compat\n" +
 			"";
+<<<<<<< HEAD
 		mono.android.Runtime.register ("Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", SearchViewCompat_OnCloseListenerImplementor.class, __md_methods);
+=======
+		mono.android.Runtime.register ("Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat", SearchViewCompat_OnCloseListenerImplementor.class, __md_methods);
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 
@@ -21,7 +25,11 @@ public class SearchViewCompat_OnCloseListenerImplementor
 	{
 		super ();
 		if (getClass () == SearchViewCompat_OnCloseListenerImplementor.class)
+<<<<<<< HEAD
 			mono.android.TypeManager.Activate ("Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+=======
+			mono.android.TypeManager.Activate ("Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat", "", this, new java.lang.Object[] {  });
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 

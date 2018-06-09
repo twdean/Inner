@@ -11,6 +11,7 @@
 namespace Inner.UI.Completed {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Comple" +
         "ted/ProfilePage.xaml")]
     public partial class ProfilePage : global::Xamarin.Forms.ContentPage {
@@ -30,6 +31,14 @@ namespace Inner.UI.Completed {
             imgLogo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imgLogo");
             lblProfileTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblProfileTitle");
             txtEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtEmail");
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\UI\\Completed\\ProfilePage.xaml")]
+    public partial class ProfilePage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private void InitializeComponent() {
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ProfilePage));
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         }
     }
 }

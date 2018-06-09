@@ -9,6 +9,7 @@ using Android.Widget;
 using Android.OS;
 using SegmentedControl.FormsPlugin.Android;
 using ImageCircle.Forms.Plugin.Droid;
+using Inner.UI;
 
 namespace Inner.Droid
 {
@@ -16,14 +17,15 @@ namespace Inner.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public static Context AndroidContext { get; private set; }
+        public static bool isFirstTime { get; set; } = true;
 
         protected override void OnCreate(Bundle bundle)
         {
             AndroidContext = this;
 
-
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            Intent intent = new Intent();
 
             base.OnCreate(bundle);
 
@@ -31,7 +33,23 @@ namespace Inner.Droid
             SegmentedControlRenderer.Init();
             ImageCircleRenderer.Init();
 
-            LoadApplication(new App());
+            NavigationPage(intent);
+            //LoadApplication(new App());
         }
+
+        public void NavigationPage(Intent intent)
+        {
+            if (isFirstTime)
+            {
+                LoadApplication(new App());
+                isFirstTime = false;
+            }
+            else
+            {
+                LoadApplication(new App(intent.GetIntExtra("PostID", 1)));
+                isFirstTime = true;
+            }
+        }
+
     }
 }

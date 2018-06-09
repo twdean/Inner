@@ -13,7 +13,11 @@ public class Snackbar_SnackbarActionClickImplementor
 		__md_methods = 
 			"n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View/IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
+<<<<<<< HEAD
 		mono.android.Runtime.register ("Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", Snackbar_SnackbarActionClickImplementor.class, __md_methods);
+=======
+		mono.android.Runtime.register ("Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design", Snackbar_SnackbarActionClickImplementor.class, __md_methods);
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 
@@ -21,7 +25,11 @@ public class Snackbar_SnackbarActionClickImplementor
 	{
 		super ();
 		if (getClass () == Snackbar_SnackbarActionClickImplementor.class)
+<<<<<<< HEAD
 			mono.android.TypeManager.Activate ("Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+=======
+			mono.android.TypeManager.Activate ("Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design", "", this, new java.lang.Object[] {  });
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 

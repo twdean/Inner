@@ -17,7 +17,11 @@ public class Transition_TransitionListenerImplementor
 			"n_onTransitionResume:(Landroid/support/transition/Transition;)V:GetOnTransitionResume_Landroid_support_transition_Transition_Handler:Android.Support.Transitions.Transition/ITransitionListenerInvoker, Xamarin.Android.Support.Transition\n" +
 			"n_onTransitionStart:(Landroid/support/transition/Transition;)V:GetOnTransitionStart_Landroid_support_transition_Transition_Handler:Android.Support.Transitions.Transition/ITransitionListenerInvoker, Xamarin.Android.Support.Transition\n" +
 			"";
+<<<<<<< HEAD
 		mono.android.Runtime.register ("Android.Support.Transitions.Transition+ITransitionListenerImplementor, Xamarin.Android.Support.Transition, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", Transition_TransitionListenerImplementor.class, __md_methods);
+=======
+		mono.android.Runtime.register ("Android.Support.Transitions.Transition+ITransitionListenerImplementor, Xamarin.Android.Support.Transition", Transition_TransitionListenerImplementor.class, __md_methods);
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 
@@ -25,7 +29,11 @@ public class Transition_TransitionListenerImplementor
 	{
 		super ();
 		if (getClass () == Transition_TransitionListenerImplementor.class)
+<<<<<<< HEAD
 			mono.android.TypeManager.Activate ("Android.Support.Transitions.Transition+ITransitionListenerImplementor, Xamarin.Android.Support.Transition, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+=======
+			mono.android.TypeManager.Activate ("Android.Support.Transitions.Transition+ITransitionListenerImplementor, Xamarin.Android.Support.Transition", "", this, new java.lang.Object[] {  });
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 

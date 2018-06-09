@@ -14,7 +14,11 @@ public class MenuItemHoverListenerImplementor
 			"n_onItemHoverEnter:(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/MenuItem;)V:GetOnItemHoverEnter_Landroid_support_v7_view_menu_MenuBuilder_Landroid_view_MenuItem_Handler:Android.Support.V7.Widget.IMenuItemHoverListenerInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
 			"n_onItemHoverExit:(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/MenuItem;)V:GetOnItemHoverExit_Landroid_support_v7_view_menu_MenuBuilder_Landroid_view_MenuItem_Handler:Android.Support.V7.Widget.IMenuItemHoverListenerInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
 			"";
+<<<<<<< HEAD
 		mono.android.Runtime.register ("Android.Support.V7.Widget.IMenuItemHoverListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MenuItemHoverListenerImplementor.class, __md_methods);
+=======
+		mono.android.Runtime.register ("Android.Support.V7.Widget.IMenuItemHoverListenerImplementor, Xamarin.Android.Support.v7.AppCompat", MenuItemHoverListenerImplementor.class, __md_methods);
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 
@@ -22,7 +26,11 @@ public class MenuItemHoverListenerImplementor
 	{
 		super ();
 		if (getClass () == MenuItemHoverListenerImplementor.class)
+<<<<<<< HEAD
 			mono.android.TypeManager.Activate ("Android.Support.V7.Widget.IMenuItemHoverListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+=======
+			mono.android.TypeManager.Activate ("Android.Support.V7.Widget.IMenuItemHoverListenerImplementor, Xamarin.Android.Support.v7.AppCompat", "", this, new java.lang.Object[] {  });
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 	}
 
 

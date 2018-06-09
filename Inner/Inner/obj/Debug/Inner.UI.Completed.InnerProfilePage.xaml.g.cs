@@ -11,8 +11,12 @@
 namespace Inner.UI {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Comple" +
         "ted/InnerProfilePage.xaml")]
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\UI\\Completed\\InnerProfilePage.xaml")]
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
     public partial class InnerProfilePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -28,6 +32,7 @@ namespace Inner.UI {
         private global::Xamarin.Forms.StackLayout contactOptionsLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+<<<<<<< HEAD
         private global::Xamarin.Forms.Button btnSms;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -38,6 +43,18 @@ namespace Inner.UI {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnMail;
+=======
+        private global::Xamarin.Forms.TapGestureRecognizer btnSms;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.TapGestureRecognizer btnPhone;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.TapGestureRecognizer btnVideo;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.TapGestureRecognizer btnEmail;
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstInnerFeed;
@@ -49,10 +66,17 @@ namespace Inner.UI {
             profileImageLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "profileImageLayout");
             lblFullName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblFullName");
             contactOptionsLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "contactOptionsLayout");
+<<<<<<< HEAD
             btnSms = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnSms");
             btnPhone = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnPhone");
             btnVideo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnVideo");
             btnMail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnMail");
+=======
+            btnSms = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.TapGestureRecognizer>(this, "btnSms");
+            btnPhone = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.TapGestureRecognizer>(this, "btnPhone");
+            btnVideo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.TapGestureRecognizer>(this, "btnVideo");
+            btnEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.TapGestureRecognizer>(this, "btnEmail");
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
             lstInnerFeed = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "lstInnerFeed");
         }
     }

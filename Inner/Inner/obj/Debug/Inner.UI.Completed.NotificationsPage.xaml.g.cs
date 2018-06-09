@@ -11,6 +11,7 @@
 namespace Inner.UI.Completed {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Comple" +
         "ted/NotificationsPage.xaml")]
     public partial class NotificationsPage : global::Xamarin.Forms.ContentPage {
@@ -23,13 +24,44 @@ namespace Inner.UI.Completed {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::SegmentedControl.FormsPlugin.Abstractions.SegmentedControl segFrequency;
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\UI\\Completed\\NotificationsPage.xaml")]
+    public partial class NotificationsPage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblweekly;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblBiWeekly;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblMonthly;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblLastReminder;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblNextReminder;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnUpdate;
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(NotificationsPage));
+<<<<<<< HEAD
             imgLogo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imgLogo");
             lblProfileTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblProfileTitle");
             segFrequency = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::SegmentedControl.FormsPlugin.Abstractions.SegmentedControl>(this, "segFrequency");
+=======
+            lblweekly = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblweekly");
+            lblBiWeekly = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblBiWeekly");
+            lblMonthly = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblMonthly");
+            lblLastReminder = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblLastReminder");
+            lblNextReminder = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblNextReminder");
+            btnUpdate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnUpdate");
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         }
     }
 }

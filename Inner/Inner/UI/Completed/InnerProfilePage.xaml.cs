@@ -39,29 +39,75 @@ namespace Inner.UI
                 Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG"))
             };
 
-
-
             profileImageLayout.Children.Add(circleImage);
         }
 
-        void SMS_Clicked(object sender, System.EventArgs e)
+        //void SMS_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"sms:{_currentContact.PhoneNumber}"));
+        //}
+
+        //void Phone_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"tel:{_currentContact.PhoneNumber}"));
+        //}
+
+        //void Video_Clicked(object sender, System.EventArgs e)
+        //{
+        //    DisplayAlert("Not Available", "Sorry, this is still in development.", "OK");
+        //}
+
+        //void Email_Clicked(object sender, System.EventArgs e)
+        //{
+        //    Device.OpenUri(new Uri($"mailto:{_currentContact.Email}"));
+        //}
+
+        private void btnSms_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"sms:{_currentContact.PhoneNumber}"));
+            try
+            {
+                Device.OpenUri(new Uri($"sms:{_currentContact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Phone_Clicked(object sender, System.EventArgs e)
+        private void btnPhone_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"tel:{_currentContact.PhoneNumber}"));
+            try
+            {
+                Device.OpenUri(new Uri($"tel:{_currentContact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Video_Clicked(object sender, System.EventArgs e)
+        private void btnVideo_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Not Available", "Sorry, this is still in development.", "OK");
+            try
+            {
+                DisplayAlert("Not Available", "Sorry, this is still in development.", "OK");
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Email_Clicked(object sender, System.EventArgs e)
+        private void btnEmail_Tapped(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri($"mailto:{_currentContact.Email}"));
+            try
+            {
+                Device.OpenUri(new Uri($"mailto:{_currentContact.Email}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
     }
 }

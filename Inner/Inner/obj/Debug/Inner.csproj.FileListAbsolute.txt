@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/bin/Debug/Inner.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/bin/Debug/Inner.pdb
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/bin/Debug/ImageCircle.Forms.Plugin.Abstractions.dll
@@ -45,3 +46,52 @@
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/obj/Debug/Inner.UI.Completed.ProfilePage.xaml.g.cs
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/obj/Debug/Inner.dll
 /Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/obj/Debug/Inner.pdb
+=======
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Inner.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Inner.pdb
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Newtonsoft.Json.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\PCLStorage.Abstractions.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\PCLStorage.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.Abstractions.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\SegmentedControl.FormsPlugin.Abstractions.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Core.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Platform.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Core.pdb
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Core.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Xaml.pdb
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\PCLStorage.Abstractions.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\PCLStorage.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Newtonsoft.Json.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.Abstractions.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\Plugin.LocalNotifications.xml
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb
+E:\Twdean_Workspace\Inner\Inner\bin\Debug\ImageCircle.Forms.Plugin.Abstractions.xml
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csprojAssemblyReference.cache
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csproj.CoreCompileInputs.cache
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.App.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.InnerPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.WelcomePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.CreateCirclePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Shared.ContactsPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.InnerSummary.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.NotificationFrequencySetupPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.EmailSetupPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Onboarding.OnboardingCompletePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Notifications.LocalNotificationPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.ManageTabbedPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.DashboardPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.ManagePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.AboutPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.InnerProfilePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.SettingsPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.RemindersPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.NotificationsPage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.UI.Completed.ProfilePage.xaml.g.cs
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.csproj.CopyComplete
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.dll
+E:\Twdean_Workspace\Inner\Inner\obj\Debug\Inner.pdb
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

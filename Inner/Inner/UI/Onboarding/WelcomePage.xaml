@@ -1,29 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    NavigationPage.HasNavigationBar = "false"
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
     x:Class="Inner.UI.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="0,20,0,0"
     BackgroundImage="bluebackground.png"
-    Padding="0,20,0,0">
+    NavigationPage.HasNavigationBar="false">
 
     <AbsoluteLayout>
-            <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
-         <Label x:Name="lblProfileTitle" Text="Welcome!"
-            FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"/>
+        <Label
+            x:Name="lblProfileTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Welcome!"
+            TextColor="White" />
 
-                
-            <Label x:Name="lblWelcome" Text="Inner is the easiest and most effective way to keep in touch with those you love" 
-                   FontSize="20" TextColor="White" HorizontalTextAlignment="Center"
-                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
-            />
 
-        <Button Image="icons8rightcircularwhite.png" Scale="0.5" Clicked="Next_Clicked"
-               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
-               />
+        <Label
+            x:Name="lblWelcome"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Inner is the easiest and most effective way to keep in touch with those you love"
+            TextColor="White" />
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="Next_Clicked"
+            Image="icons8rightcircularwhite.png"
+            Scale="0.5" />
     </AbsoluteLayout>
 
 </ContentPage>

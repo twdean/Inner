@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Values/Strings.xml;values/strings.xml
+=======
+Values/Strings.xml;values/strings.xml
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

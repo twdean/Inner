@@ -7,16 +7,32 @@ UseSharedRuntime=true
 EmbedAssembliesIntoApk=False
 AndroidLinkMode=None
 AndroidLinkSkip=
+<<<<<<< HEAD
 AndroidSdkBuildToolsVersion=23.0.0
+=======
+AndroidSdkBuildToolsVersion=27.0.3
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 AndroidSdkPath=
 AndroidNdkPath=
 JavaSdkPath=
 AndroidSequencePointsMode=None
+<<<<<<< HEAD
 XamarinAndroidVersion=8.2.0-16
+=======
+XamarinAndroidVersion=8.3.0-19
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
 MonoSymbolArchive=False
 AndroidUseLatestPlatformSdk=false
 TargetFrameworkVersion=v7.1
 AndroidCreatePackagePerAbi=
+<<<<<<< HEAD
 OS=Unix
 DesignTimeBuild=true
 AndroidIncludeDebugSymbols=True
+=======
+OS=Windows_NT
+DesignTimeBuild=true
+AndroidIncludeDebugSymbols=True
+AdbTarget=
+AdbOptions=
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30

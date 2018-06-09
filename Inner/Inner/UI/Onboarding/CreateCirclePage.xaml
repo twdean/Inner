@@ -1,30 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    NavigationPage.HasNavigationBar = "false"
-    Title="Choose your circle" 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Inner.UI.CreateCirclePage"
-    BackgroundImage="bluebackground.png">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="Inner.UI.CreateCirclePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Choose your circle"
+    BackgroundImage="bluebackground.png"
+    NavigationPage.HasNavigationBar="false">
 
     <AbsoluteLayout>
-         <Image Source="Logo.png" x:Name="imgLogo"
-               AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
 
-           <Label x:Name="lblWelcome" Text="Create Your Circle" 
-                FontSize="30" TextColor="White" XAlign="Center"
-                HorizontalTextAlignment="Center"
-                AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
-            />
+        <Image
+            x:Name="imgLogo"
+            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Source="Logo.png" />
 
-            <Label x:Name="lblSubTitle" 
-                   Text="Add people from your contacts" 
-                   FontSize="20" TextColor="White" XAlign="Center"
-            AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
-            />
+        <Label
+            x:Name="lblWelcome"
+            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Create Your Circle"
+            TextColor="White"
+            XAlign="Center" />
 
-         <Button Image="icons8pluswhite.png" Scale="0.5" Clicked="Next_Clicked"
-               AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
-               />
+        <Label
+            x:Name="lblSubTitle"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="20"
+            Text="Add people from your contacts"
+            TextColor="White"
+            XAlign="Center" />
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5,0.75,270,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="Next_Clicked"
+            Image="icons8pluswhite.png"
+            Scale="0.5" />
+
     </AbsoluteLayout>
-  
+
 </ContentPage>

@@ -11,8 +11,12 @@
 namespace Inner.UI.Completed {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Comple" +
         "ted/RemindersPage.xaml")]
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\UI\\Completed\\RemindersPage.xaml")]
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
     public partial class RemindersPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

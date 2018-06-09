@@ -11,6 +11,7 @@
 namespace Inner.UI.Completed {
     
     
+<<<<<<< HEAD
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/trevordean/Documents/Development/Level 9/Repos/Inner/Inner/Inner/UI/Comple" +
         "ted/AboutPage.xaml")]
     public partial class AboutPage : global::Xamarin.Forms.ContentPage {
@@ -26,6 +27,14 @@ namespace Inner.UI.Completed {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AboutPage));
             imgLogo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imgLogo");
             lblAbout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblAbout");
+=======
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Twdean_Workspace\\Inner\\Inner\\UI\\Completed\\AboutPage.xaml")]
+    public partial class AboutPage : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private void InitializeComponent() {
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AboutPage));
+>>>>>>> 5fad4576f1624a6c3337551b5197e8f346e00c30
         }
     }
 }
