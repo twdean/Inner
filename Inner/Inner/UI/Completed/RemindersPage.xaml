@@ -5,24 +5,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Padding="0,20,0,0"
     BackgroundImage="bluebackground.png">
-
+    
+   
     <AbsoluteLayout>
-        <Image
-            x:Name="imgLogo"
-            AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
-            AbsoluteLayout.LayoutFlags="All"
-            Source="Logo.png" />
-
-        <Label
-            x:Name="lblProfileTitle"
-            AbsoluteLayout.LayoutBounds="0.5,0.35,270,150"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
-            FontSize="30"
-            HorizontalTextAlignment="Center"
-            Text="Schedule Summary"
-            TextColor="White" />
-
-        <Grid AbsoluteLayout.LayoutBounds="0.3,0.5,350,50" AbsoluteLayout.LayoutFlags="PositionProportional">
+        <StackLayout Margin="20,0,20,0" Orientation="Vertical" Spacing="20"
+                     AbsoluteLayout.LayoutBounds="0.3,0.1,350,50" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center" Text="Schedule" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="0" Grid.ColumnSpan="2" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+            </Grid>
+        </StackLayout>
+        
+        <Grid AbsoluteLayout.LayoutBounds="0.3,0.3,350,50" AbsoluteLayout.LayoutFlags="PositionProportional">
             <Label
                 Grid.Row="0"
                 Grid.Column="0"

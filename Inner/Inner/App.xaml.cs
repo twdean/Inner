@@ -6,14 +6,24 @@ namespace Inner
 {
     public partial class App : Application
     {
+        //public App()
+        //{
+            
+        //}
+
         public App(int PostId = -1)
         {
             InitializeComponent();
 
             var preferences = FileManager.GetPreferences();
+           
 
             if (PostId >= 0)
             {
+                var appData = DataManager.GetNotificationData();
+
+                DataManager.SaveNotificationData(appData);
+
                 MainPage = new NavigationPage(new LocalNotificationPage());
             }
             else

@@ -62,7 +62,7 @@ namespace Inner.iOS.Classes
             };
 
             var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(notifyTime, false);
-            var request = UNNotificationRequest.FromIdentifier("Flat App", content, trigger);
+            var request = UNNotificationRequest.FromIdentifier("Inner App", content, trigger);
 
             UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
         }

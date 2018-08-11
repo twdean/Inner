@@ -14,12 +14,12 @@ namespace Inner.UI
             InitializeComponent();
         }
 
+
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             try
             {
                 //<--TODO Need to send first notification
-                //var preferences = InnerPreferences.GetInnerPreferences();
                 var preferences = FileManager.GetPreferences();
 
                 var notificationHelper = DependencyService.Get<INotify>();
@@ -29,13 +29,13 @@ namespace Inner.UI
                 preferences.LastRunDate = DateTime.Now;
 
                 preferences.OnboardingComplete = true;
-                //InnerPreferences.SavePreferences(preferences);
+
                 FileManager.SavePreferences(preferences);
                 lblNotification.IsVisible = true;
                 btnStart.Text = "Here is Comes!";
                 btnStart.IsEnabled = false;
 
-                //<!--TODO Need to call web service to insert data
+                DataManager.InsertAppDataAsync();
             }
             catch (Exception ex)
             {

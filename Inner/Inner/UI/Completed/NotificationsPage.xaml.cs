@@ -181,16 +181,16 @@ namespace Inner.UI.Completed
             }
         }
 
-        private void btnBack_Tapped(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PopAsync();
-            }
-            catch (Exception ex)
-            {
-                var exp = ex.Message;
-            }
-        }
+        //private void btnBack_Tapped(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        Navigation.PopAsync();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        var exp = ex.Message;
+        //    }
+        //}
     }
 }

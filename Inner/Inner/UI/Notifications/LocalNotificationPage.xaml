@@ -21,75 +21,7 @@
 
         </StackLayout>
 
-        <!--<Grid Padding="15" RowSpacing="15">
-            <Label
-                x:Name="optionsDesc"
-                Grid.Row="0"
-                Grid.Column="0"
-                HorizontalOptions="Center"
-                TextColor="White" />
-
-            <Button
-                x:Name="btnSms"
-                Grid.Row="1"
-                Grid.Column="0"
-                BackgroundColor="Transparent"
-                Clicked="Sms_Clicked"
-                HeightRequest="50"
-                Image="icons8speechbubble.png"
-                Text="SMS"
-                TextColor="White"
-                WidthRequest="50" />
-
-            <Button
-                x:Name="btnPhone"
-                Grid.Row="2"
-                Grid.Column="0"
-                BackgroundColor="Transparent"
-                Clicked="Phone_Clicked"
-                HeightRequest="50"
-                Image="icons8phone.png"
-                Text="Phone"
-                TextColor="White"
-                WidthRequest="50" />
-
-            <Button
-                x:Name="btnVideo"
-                Grid.Row="3"
-                Grid.Column="0"
-                BackgroundColor="Transparent"
-                Clicked="Video_Clicked"
-                HeightRequest="50"
-                Image="icons8videocall.png"
-                Text="Video"
-                TextColor="White"
-                WidthRequest="50" />
-
-            <Button
-                x:Name="btnMail"
-                Grid.Row="4"
-                Grid.Column="0"
-                BackgroundColor="Transparent"
-                Clicked="Email_Clicked"
-                HeightRequest="50"
-                Image="icons8gmail.png"
-                Text="Email"
-                TextColor="White"
-                WidthRequest="50" />
-
-            <Button
-                x:Name="btnLater"
-                Grid.Row="5"
-                Grid.Column="0"
-                BackgroundColor="Transparent"
-                Clicked="Later_Clicked"
-                HeightRequest="50"
-                Image="icons8last24hours.png"
-                Text="Later"
-                TextColor="White"
-                WidthRequest="50" />
-        </Grid>-->
-
+     
         <StackLayout Padding="15" Spacing="20">
 
             <Label
@@ -155,7 +87,7 @@
             </StackLayout.GestureRecognizers>
         </StackLayout>
 
-        <StackLayout
+<!--        <StackLayout
             x:Name="btnVideo"
             Padding="15"
             HorizontalOptions="CenterAndExpand"
@@ -181,7 +113,7 @@
                 <TapGestureRecognizer Tapped="btnVideo_Tapped" />
             </StackLayout.GestureRecognizers>
         </StackLayout>
-
+-->
         <StackLayout
             x:Name="btnMail"
             Padding="15"

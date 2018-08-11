@@ -1,13 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    x:Class="Inner.UI.InnerProfilePage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-    BackgroundImage="bluebackground.png">
-
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage x:Class="Inner.UI.InnerProfilePage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" BackgroundImage="bluebackground.png">
     <ScrollView>
-        <AbsoluteLayout x:Name="mainLayout">
+        <StackLayout Padding="20" Margin="20,30,20,80" Spacing="0">      
+        <Grid Padding="0" Margin="20,80,20,80">
+             <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" x:Name="lblFullName" Text="{Binding Name}" XAlign="Center" TextColor="White" FontSize="20" />
+            <Image Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" HeightRequest="48" Source="icons8speechbubble.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnSms" NumberOfTapsRequired="1" Tapped="btnSms_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" HeightRequest="48" Source="icons8phone.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnPhone" NumberOfTapsRequired="1" Tapped="btnPhone_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="1" Grid.Column="2" BackgroundColor="Transparent" HeightRequest="48" Source="icons8videocall.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnVideo" NumberOfTapsRequired="1" Tapped="btnVideo_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Row="1" Grid.Column="3" BackgroundColor="Transparent" HeightRequest="48" Source="icons8gmail.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnEmail" NumberOfTapsRequired="1" Tapped="btnEmail_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <BoxView Grid.Row="2" Grid.ColumnSpan="4" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+        </Grid >
+            <Grid Padding="0" Margin="30,0,30,80">
+            <Label Grid.Row="0" Grid.Column="0" x:Name="lblBirthday" Text="Birthday" VerticalTextAlignment="Center" TextColor="White"/>
+            <DatePicker
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="birthDate"
+                        DateSelected="Handle_DateSelected"
+                        Format="dd/MM/yyyy">
+                        <DatePicker.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+                                <OnPlatform.iOS>0,0,0,0</OnPlatform.iOS>
+                            </OnPlatform>
+                        </DatePicker.Margin>
+                    </DatePicker>
+            </Grid>
+      </StackLayout>
+        <!-- <AbsoluteLayout x:Name="mainLayout">
 
             <StackLayout
                 x:Name="profileImageLayout"
@@ -86,102 +134,72 @@
                                 NumberOfTapsRequired="1"
                                 Tapped="btnEmail_Tapped" />
                         </Image.GestureRecognizers>
-                    </Image>
-
+                    </Image>                
                 </StackLayout>
+                <Grid Margin="20,0,20,0" BackgroundColor="Red">
+                    <BoxView Grid.Row="0" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+                    <Label Grid.Row="1" Text="Birthday"/>
+                </Grid>
+            </StackLayout>-->
+        <!--            <StackLayout BackgroundColor="Red" Margin="20,0,20,0" Orientation="Vertical" Spacing="20"
+                AbsoluteLayout.LayoutBounds="0.50,0.35,350,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid BackgroundColor="Teal" Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0" VerticalOptions="Fill">
+                <BoxView Grid.Row="0" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+                <Label Grid.Row="1" Text="Birthday"/>
+                </Grid>
+            </StackLayout>
+ -->
+        <!-- <StackLayout
+                x:Name="birthdayLayout"
+                AbsoluteLayout.LayoutBounds="0.35,0.5,300,65"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Grid BackgroundColor="Teal">
+                 <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="Auto" />
 
-                <!--<Button
-                x:Name="btnSms"
-                BackgroundColor="Transparent"
-                Clicked="SMS_Clicked"
-                HeightRequest="50"
-                Image="icons8speechbubble.png"
-                WidthRequest="50" />
+                </Grid.RowDefinitions>
 
-            <Button
-                x:Name="btnPhone"
-                BackgroundColor="Transparent"
-                Clicked="Phone_Clicked"
-                HeightRequest="50"
-                Image="icons8phone.png"
-                WidthRequest="50" />
 
-            <Button
-                x:Name="btnVideo"
-                BackgroundColor="Transparent"
-                Clicked="Video_Clicked"
-                HeightRequest="50"
-                Image="icons8videocall.png"
-                WidthRequest="50" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="Birthday"
+                        TextColor="White"
+                         />
 
-            <Button
-                x:Name="btnMail"
-                BackgroundColor="Transparent"
-                Clicked="Email_Clicked"
-                HeightRequest="50"
-                Image="icons8gmail.png"
-                WidthRequest="50" />-->
-
+            
+                    <DatePicker
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        x:Name="birthDate"
+                        DateSelected="Handle_DateSelected"
+                        Format="dd/MM/yyyy">
+                        <DatePicker.Margin>
+                            <OnPlatform x:TypeArguments="Thickness">
+                                <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+                                <OnPlatform.iOS>0,0,0,0</OnPlatform.iOS>
+                            </OnPlatform>
+                        </DatePicker.Margin>
+                    </DatePicker>
+                                   
+                </Grid>
+                
             </StackLayout>
 
 
             <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.95,350,370" AbsoluteLayout.LayoutFlags="PositionProportional">
-
                 <StackLayout.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
                         <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
                     </OnPlatform>
-                </StackLayout.Margin>
-
-                <Label Text="Enrich your conversation" XAlign="Center">
-                    <Label.Margin>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
-                            <OnPlatform.iOS>0,30,0,0</OnPlatform.iOS>
-                        </OnPlatform>
-                    </Label.Margin>
-                </Label>
-
-                <ListView x:Name="lstInnerFeed" ItemsSource="{Binding FeedItems}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Grid Padding="5">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="20" />
-                                        <RowDefinition Height="20" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="40" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label
-                                        Grid.Row="0"
-                                        Grid.Column="0"
-                                        LineBreakMode="TailTruncation"
-                                        Text="Buttermild and Fried Chicken" />
-                                    <Label
-                                        Grid.Row="1"
-                                        Grid.Column="0"
-                                        Font="Small"
-                                        LineBreakMode="TailTruncation"
-                                        Text="Popular on Pinterest"
-                                        TextColor="Gray" />
-                                    <Image
-                                        Grid.Row="0"
-                                        Grid.RowSpan="2"
-                                        Grid.Column="1"
-                                        Aspect="AspectFill"
-                                        Source="icons8picture.png" />
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                </StackLayout.Margin>     
             </StackLayout>
-
-        </AbsoluteLayout>
+        </AbsoluteLayout>-->
     </ScrollView>
 </ContentPage>

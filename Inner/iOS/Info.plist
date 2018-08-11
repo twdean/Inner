@@ -8,8 +8,6 @@
 	<string>InnerCircle</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.level9.notificationinner</string>
-	<key>CFBundleShortVersionString</key>
-	<string>3.2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -40,12 +38,14 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSContactsUsageDescription</key>
-	<string>New Entry</string>
+	<string>Contacts are required to select which contacts you would like to be reminded about</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3.0</string>
+	<string>1.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>8</string>
 </dict>
 </plist>

@@ -54,7 +54,7 @@ namespace Inner.ViewModels
                 mContactViewModel.Email = c.Email;
                 mContactViewModel.InCircle = InCircle(c, preferences.InnerContacts);
                 mContactViewModel.PhoneNumber = c.PhoneNumber;
-                mContactViewModel.FirstName = c.FirstName.Replace(mContactViewModel.LastName, "").Trim();
+                mContactViewModel.FirstName = mContactViewModel.LastName != string.Empty ? c.FirstName.Replace(mContactViewModel.LastName, "").Trim() : c.FirstName;
 
                 Contacts.Add(mContactViewModel);
             }
@@ -158,38 +158,52 @@ namespace Inner.ViewModels
 
                 foreach (var item in ls)
                 {
-                    var nm = item[0];
-                    firstLetters.Add(nm.ToString().ToUpper());
+                    if (!string.IsNullOrEmpty(item))
+                    {
+                        var nm = item[0];
+                        firstLetters.Add(nm.ToString().ToUpper());
+                    }
                 }
 
                 foreach (var letter in firstLetters.GroupBy(x => x))
                 {
                     List<ContactViewModel> contactViewModel = new List<ContactViewModel>();
 
-                    if (mContects.Where(x => x.LastName.Substring(0, 1).ToUpper() == letter.Key.ToUpper()).Count() > 0)
+                    try
                     {
-                        contactViewModel = mContects.Where(x => x.LastName[0].ToString().ToUpper() == letter.Key
-                                                                ).OrderBy(x => x.LastName).ToList();
-                        foreach (var item in contactViewModel)
+                        var haveLastNames = mContects.Where(x => x.LastName != "").ToList();
+                        var noLastName = mContects.Where(x => x.FirstName != "" && x.LastName == "").ToList();
+                     
+                        if (haveLastNames.Where(x => x.LastName.Substring(0, 1).ToUpper() == letter.Key.ToUpper()).Count() > 0)
                         {
-                            item.LastFontAttribute = FontAttributes.Bold;
+                            contactViewModel = haveLastNames.Where(x => x.LastName[0].ToString().ToUpper() == letter.Key
+                                                                    ).OrderBy(x => x.LastName).ToList();
+                            foreach (var item in contactViewModel)
+                            {
+                                item.LastFontAttribute = FontAttributes.Bold;
+                            }
                         }
-                    }
 
-                    if (contactViewModel.Count() == 0)
-                    {
-                        contactViewModel = mContects.Where(x => x.FirstName[0].ToString().ToUpper() == letter.Key).OrderBy(x => x.FirstName).ToList();
-                        foreach (var item in contactViewModel)
+                        if (noLastName.Count() > 0)
                         {
-                            item.FirstFontAttribute = FontAttributes.Bold;
+                            var list = noLastName.Select(x => x.FirstName[0].ToString().ToUpper()).ToList();
+                            contactViewModel.AddRange(noLastName.Where(x => x.FirstName[0].ToString().ToUpper() == letter.Key).OrderBy(x => x.FirstName).ToList());
+                            //foreach (var item in contactViewModel)
+                            //{
+                            //    item.FirstFontAttribute = FontAttributes.Bold;
+                            //}
                         }
-                    }
 
-                    foreach (var item in contactViewModel.OrderBy(x => x.FirstName))
-                    {
-                        allListItemGroups1.Add(item);
+                        foreach (var item in contactViewModel.OrderBy(x => x.FirstName))
+                        {
+                            allListItemGroups1.Add(item);
+                        }                  
                     }
-                }
+                    catch(Exception ex)
+                    {
+                        var exMsg = ex.ToString();
+                    }
+               }
 
                 foreach (var item in allListItemGroups1)
                 {

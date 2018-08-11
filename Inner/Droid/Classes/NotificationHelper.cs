@@ -34,31 +34,7 @@ namespace Inner.Droid.Classes
 
         }
 
-        //public void SendNotification(string title, string message, long notifyTime)
-        //{
-        //    var notIntent = new Intent();
-        //    var contentIntent = PendingIntent.GetActivity(MainActivity.AndroidContext, 0, notIntent, PendingIntentFlags.CancelCurrent);
-
-        //    Notification.Builder builder = new Notification.Builder(MainActivity.AndroidContext)
-        //       .SetAutoCancel(true)                    // Dismiss from the notif. area when clicked    
-        //       .SetContentIntent(contentIntent)
-        //        .SetWhen(notifyTime)
-        //       .SetContentTitle(title)      // Set its title       
-        //       .SetSmallIcon(Resource.Drawable.abc_btn_radio_to_on_mtrl_000)  // Display this icon
-        //       .SetContentText(message); // The message to display.
-
-        //    // Finally, publish the notification:
-        //    //NotificationManager notificationManager = (NotificationManager)GetSystemService(Context.NotificationService);
-        //    //notificationManager.Notify(ButtonClickNotificationId, builder.Build());
-
-
-        //    //Create notification
-        //    // var notificationManager = GetSystemService(Context.NotificationService) as NotificationManager;
-
-        //    //NotificationManager notificationManager = (NotificationManager)GetSystemService(Context.NotificationService);
-        //    //notificationManager.Notify(ButtonClickNotificationId, builder.Build());
-        //}
-
+     
         public void SendNotification(string title, string message, long notifyTime)
         {
             Intent secondIntent = new Intent(Xamarin.Forms.Forms.Context, typeof(MainActivity));

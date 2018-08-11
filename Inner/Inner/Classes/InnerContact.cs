@@ -10,6 +10,7 @@ namespace Inner.Classes
         public bool InCircle { get; set; }
         public string Email { get; set; }
         public string ProfileImage { get; set; }
+        public DateTime Birthday { get; set; }
 
         public string Name
         {

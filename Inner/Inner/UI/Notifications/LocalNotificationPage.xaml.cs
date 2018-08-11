@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Inner.Classes;
 using Xamarin.Forms;
 
@@ -11,21 +13,17 @@ namespace Inner.UI
         InnerPreferences _preferences;
         InnerData _data;
 
-
-
-        public LocalNotificationPage()
+		
+		public LocalNotificationPage()
         {
             InitializeComponent();
 
             _preferences = FileManager.GetPreferences();
-            _data = DataManager.GetNotificationData();
-
+                      
             _contact = InnerUtility.GetInnerContact(_preferences.InnerContacts);
 
-            if(_contact != null)
+            if (_contact != null)
             {
-                var nextNotificationDate = InnerUtility.GetNextRunDate(_preferences.Frequency);
-
                 var messageTitle = string.Format("Give {0} a shout", _contact.FirstName);
                 var message = string.Format("I bet {0} would love to hear from you!", _contact.FirstName);
                 var optionsMessage = "How would you like to connect?";
@@ -34,62 +32,113 @@ namespace Inner.UI
                 notificationTitle.Text = messageTitle;
                 notificationDesc.Text = message;
                 optionsDesc.Text = optionsMessage;
+            } 
+    
+                     
+        }
+
+        private async void btnPhone_Tapped(object sender, EventArgs e)
+        {
+            try
+            {
+                SetNextNotification();
+
+                DataManager.UpdateActivityDataAsync("phone", _contact.FirstName);
+  
+                Device.OpenUri(new Uri($"tel:{_contact.PhoneNumber}"));
+                Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
             }
-
-         
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
-        void Phone_Clicked(object sender, System.EventArgs e)
+        private async void btnSms_Tapped(object sender, EventArgs e)
         {
-            var dataPoint = new InnerNotificationData(DateTime.Now, true, "Phone", _contact);
-            _data.NotificationDataPoints.Add(dataPoint);
-            DataManager.SaveNotificationData(_data);
+            try
+            {
+                SetNextNotification();
+               
+                DataManager.UpdateActivityDataAsync("sms", _contact.FirstName);
+               
+                Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+                Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
 
-            Device.OpenUri(new Uri($"tel:{_contact.PhoneNumber}"));
-        }
-
-        void Email_Clicked(object sender, System.EventArgs e)
-        {
-            var dataPoint = new InnerNotificationData(DateTime.Now, true, "Email", _contact);
-            _data.NotificationDataPoints.Add(dataPoint);
-            DataManager.SaveNotificationData(_data);
-
-            Device.OpenUri(new Uri($"mailto:{_contact.Email}"));
-        }
-
-        void Sms_Clicked(object sender, System.EventArgs e)
-        {
-            var dataPoint = new InnerNotificationData(DateTime.Now, true, "Sms", _contact);
-            _data.NotificationDataPoints.Add(dataPoint);
-            DataManager.SaveNotificationData(_data);
-
-            Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
-        }
-
-        void Video_Clicked(object sender, System.EventArgs e)
-        {
-            var dataPoint = new InnerNotificationData(DateTime.Now, true, "Video", _contact);
-            _data.NotificationDataPoints.Add(dataPoint);
-            DataManager.SaveNotificationData(_data);
-
-            Device.OpenUri(new Uri($"sms:{_contact.PhoneNumber}"));
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
         }
 
 
-        void Later_Clicked(object sender, System.EventArgs e)
+        private async void btnMail_Tapped(object sender, EventArgs e)
         {
-            _preferences.NextNotifyDate = DateTime.Now.AddHours(24);
+            try
+            {
+                SetNextNotification();
+
+                DataManager.UpdateActivityDataAsync("email", _contact.FirstName);
+
+                Device.OpenUri(new Uri($"mailto:{_contact.Email}"));
+                Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
+        }
+
+        private void btnLater_Tapped(object sender, EventArgs e)
+        {
+            try
+            {
+                _preferences.NextNotifyDate = DateTime.Now.AddHours(24);
+                FileManager.SavePreferences(_preferences);
+                InnerUtility.UpdateNotifications(_preferences.NextNotifyDate);
+
+                DataManager.SaveNotificationData(_data);
+
+                DataManager.UpdateActivityDataAsync("snooze", _contact.FirstName);
+
+                DisplayAlert("OK", "We have rescheduled your reminder.", "OK");
+                Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+            }
+            catch (Exception ex)
+            {
+                var exp = ex.Message;
+            }
+        }
+
+        void SetNextNotification()
+        {
+            var nextNotificationDate = InnerUtility.GetNextRunDate(_preferences.Frequency);
+            InnerUtility.UpdateNotifications(nextNotificationDate);
+
+            _preferences.NextNotifyDate = nextNotificationDate;
             FileManager.SavePreferences(_preferences);
-            InnerUtility.UpdateNotifications(_preferences.NextNotifyDate);
+        }
 
-            var dataPoint = new InnerNotificationData(DateTime.Now, false, "Deferred", _contact);
-            _data.NotificationDataPoints.Add(dataPoint);
+        public Task<bool> LaunchUriAsync(Uri uri)
+        {
+            var completion = new TaskCompletionSource<bool>();
 
-            DataManager.SaveNotificationData(_data);
 
-            DisplayAlert("OK", "We have rescheduled your reminder.", "OK");
-
-            Navigation.PushModalAsync(new NavigationPage(new UI.Completed.ManageTabbedPage()), true);
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                try
+                {
+                    
+                    Device.OpenUri(uri);
+                    completion.SetResult(true);
+                }
+                catch (Exception exception)
+                {
+                    completion.SetException(exception);
+                }
+            });
+            return completion.Task;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Inner.Classes;
 using Xamarin.Forms;
 
 
@@ -18,6 +19,10 @@ namespace Inner.UI
             var email = txtEmail.Text;
             if(emailIsValid(email))
             {
+                var preferences = FileManager.GetPreferences();
+                preferences.EmailAddress = email;
+                FileManager.SavePreferences(preferences);
+
                 await Navigation.PushAsync(new OnboardingCompletePage());
             }
             else{

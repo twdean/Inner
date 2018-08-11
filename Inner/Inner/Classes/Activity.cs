@@ -3,11 +3,9 @@ namespace Inner.Classes
 {
     public class Activity
     {
-        public Activity()
-        {
-            public string ActivityType { get; set; }
-            public string Contact { get; set; }
-               
-        }
+        public string ActivityType { get; set; }
+        public string ActivityContact { get; set; }
+
+      
     }
 }

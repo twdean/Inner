@@ -1,7 +1,31 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    x:Class="Inner.UI.Completed.DashboardPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content />
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage x:Class="Inner.UI.Completed.DashboardPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundImage="bluebackground.png">
+    <ScrollView>
+        <StackLayout Margin="20,0,20,0" Orientation="Vertical" Spacing="20">
+            <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center" Text="Dashboard" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="0" Grid.ColumnSpan="2" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+            </Grid>
+            <Grid Padding="0">
+                <Label Grid.Row="0" Grid.ColumnSpan="2" x:Name="lblNotifications" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="25"  Text="" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />           
+                <Label Grid.Row="1" Grid.ColumnSpan="2"  FontSize="18" HorizontalTextAlignment="Center" Text="Notifications" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="2" Grid.ColumnSpan="2" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+
+            </Grid>
+             <Grid Padding="0">
+                <Label Grid.Row="0" Grid.ColumnSpan="2" x:Name="lblConnected" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center" Text="" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />           
+                <Label Grid.Row="1" Grid.ColumnSpan="2"  FontSize="18" HorizontalTextAlignment="Center" Text="CONNECTED" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="2" Grid.ColumnSpan="2" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

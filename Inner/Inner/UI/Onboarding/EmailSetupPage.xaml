@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="Inner.UI.EmailSetupPage"
-    BackgroundImage="bluebackground.png">
-
-      <AbsoluteLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Inner.UI.EmailSetupPage" BackgroundImage="bluebackground.png">
+  <!--  <ScrollView>
+        <StackLayout Margin="20,20,20,0" Orientation="Vertical" Spacing="10">
+            <Grid Margin="0" Padding="20" ColumnSpacing="0" RowSpacing="0" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="Logo.png" x:Name="imgLogo" />
+                <Label Grid.Row="1" x:Name="lblProfileTitle" Text="Complete Your Profile" FontSize="30" TextColor="White" HorizontalTextAlignment="Center" Margin="0,20,0,0" />
+                <Label Grid.Row="2" x:Name="lblProfileDesc" Text="Get Updates on your level of connections, trackk your communications and more" FontSize="15" TextColor="White" HorizontalTextAlignment="Center" />
+                <Entry Grid.Row="3" Placeholder="Enter your Email Address" x:Name="txtEmail" Keyboard="Email" />
+                <Button Grid.Row="4" Text="HOORAY!" Clicked="Next_Clicked" TextColor="White" BackgroundColor="Navy" FontSize="15" BorderRadius="25" Margin="0,50,0,0" />
+            </Grid>
+        </StackLayout>
+    </ScrollView>-->
+    
+    <AbsoluteLayout>
             <Image Source="Logo.png" x:Name="imgLogo"
                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25" />
 
@@ -28,5 +42,4 @@
                AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.70,170,50"
                />
     </AbsoluteLayout>
-  
 </ContentPage>

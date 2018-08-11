@@ -39,28 +39,9 @@ namespace Inner.UI
                 Source = UriImageSource.FromUri(new Uri("http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG"))
             };
 
-            profileImageLayout.Children.Add(circleImage);
+            //profileImageLayout.Children.Add(circleImage);
         }
 
-        //void SMS_Clicked(object sender, System.EventArgs e)
-        //{
-        //    Device.OpenUri(new Uri($"sms:{_currentContact.PhoneNumber}"));
-        //}
-
-        //void Phone_Clicked(object sender, System.EventArgs e)
-        //{
-        //    Device.OpenUri(new Uri($"tel:{_currentContact.PhoneNumber}"));
-        //}
-
-        //void Video_Clicked(object sender, System.EventArgs e)
-        //{
-        //    DisplayAlert("Not Available", "Sorry, this is still in development.", "OK");
-        //}
-
-        //void Email_Clicked(object sender, System.EventArgs e)
-        //{
-        //    Device.OpenUri(new Uri($"mailto:{_currentContact.Email}"));
-        //}
 
         private void btnSms_Tapped(object sender, EventArgs e)
         {
@@ -108,6 +89,12 @@ namespace Inner.UI
             {
                 var exp = ex.Message;
             }
+        }
+
+        void Handle_DateSelected(object sender, Xamarin.Forms.DateChangedEventArgs e)
+        {
+            var msg = "hello";
+
         }
     }
 }

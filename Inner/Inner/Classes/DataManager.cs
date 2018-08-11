@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,10 +59,8 @@ namespace Inner.Classes
 
                 if (string.IsNullOrEmpty(dataJson))
                 {
-                    innerData = new InnerData
-                    {
-                        NotificationDataPoints = new Collection<InnerNotificationData>()
-                    };
+                    innerData = new InnerData();
+
                 }
                 else
                 {
@@ -76,21 +76,89 @@ namespace Inner.Classes
 
         }
 
-        public async Task InsertAppDataAsync()
+        public static async Task InsertAppDataAsync()
         {
-            var restUrl = "http://innerpushapi20180212105227.azurewebsites.net/api/app";
+            try
+            {
+
+
+                var restUrl = "http://inner-20180802151810061-dev-as.azurewebsites.net/api/app";
+                var prefs = FileManager.GetPreferences();
+                HttpClient client = new HttpClient();
+
+                var dt = DateTime.Now.ToString("yyyy/MM/dd");
+
+                var restData = new InnerData
+                {
+                    Id = Guid.NewGuid(),
+                    Frequency = prefs.Frequency,
+                    NotificationDate = DateTime.Parse(dt),
+                    NumberOfContacts = prefs.InnerContacts.Count,
+                    Email = prefs.EmailAddress,
+                    Activity = new Activity
+                    {
+                        ActivityType = string.Empty,
+                        ActivityContact = string.Empty
+                    }
+                };
+
+                var json = JsonConvert.SerializeObject(restData);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+
+                var uri = new Uri(string.Format(restUrl, string.Empty));
+
+                HttpResponseMessage response = null;
+
+                try
+                {
+                    response = await client.PostAsync(uri, content);
+                }
+                catch (Exception ex)
+                {
+                    var postExceptionMsg = ex.ToString();
+                }
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    prefs.NextNotifyDate = restData.NotificationDate;
+
+                    FileManager.SavePreferences(prefs);
+                }
+                else
+                {
+                    var error = response.StatusCode;
+                }
+            }
+            catch (Exception ex)
+            {
+                var errMsg = ex.ToString();
+            }
+        }
+
+        public static async Task UpdateActivityDataAsync(string activityType, string contact)
+        {
+            var restUrl = "http://inner-20180802151810061-dev-as.azurewebsites.net/api/app/UpdateActivityData";
             var prefs = FileManager.GetPreferences();
             HttpClient client = new HttpClient();
 
-            var restData = new
+            var dt = DateTime.Now.ToString("yyyy/MM/dd");
+
+            var restData = new InnerData
             {
                 Id = Guid.NewGuid(),
                 Frequency = prefs.Frequency,
-                LastRunDate = DateTime.Now,
-                NextRunDate = DateTime.Now,
+                NotificationDate = DateTime.Parse(dt),
+                ConversationDate = DateTime.Parse(dt),
                 NumberOfContacts = prefs.InnerContacts.Count,
                 Email = prefs.EmailAddress,
-                DeviceToken = string.Empty
+                Activity = new Activity
+                {
+                    ActivityType = activityType,
+                    ActivityContact = contact
+                }
+
             };
 
             var json = JsonConvert.SerializeObject(restData);
@@ -103,7 +171,7 @@ namespace Inner.Classes
 
             try
             {
-                response = await client.PostAsync(uri, content);
+                response = await client.PutAsync(uri, content);
             }
             catch (Exception ex)
             {
@@ -113,13 +181,54 @@ namespace Inner.Classes
 
             if (response.IsSuccessStatusCode)
             {
-                prefs.NextNotifyDate = restData.NextRunDate;
+                //prefs.NextNotifyDate = restData.NotificationDate;
 
-                FileManager.SavePreferences(prefs);
+                //FileManager.SavePreferences(prefs);
             }
             else
             {
-                var error = response.StatusCode;              
+                var error = response.StatusCode;
+            }
+        }
+
+        public static List<InnerData> GetActivityDataAsync()
+        {
+            var restUrl = "http://inner-20180802151810061-dev-as.azurewebsites.net/api/app/GetApplicationData";
+            var prefs = FileManager.GetPreferences();
+            HttpClient client = new HttpClient();
+
+            UriBuilder builder = new UriBuilder(restUrl);
+            builder.Query = "email=" + prefs.EmailAddress;
+
+            HttpResponseMessage response = null;
+
+            try
+            {
+                response = client.GetAsync(builder.Uri).Result;
+            }
+            catch (Exception ex)
+            {
+                var postExceptionMsg = ex.ToString();
+            }
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                using (HttpContent content = response.Content)
+                {
+                    // ... Read the string.
+                    Task<string> result = content.ReadAsStringAsync();
+                    var res = result.Result;
+
+                    var data = JsonConvert.DeserializeObject<List<InnerData>>(res);
+
+                    return data;
+                }
+            }
+            else
+            {
+                var error = response.StatusCode;
+                return null;
             }
         }
     }

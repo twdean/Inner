@@ -42,33 +42,11 @@ namespace Inner.UI.Completed
                                    
                     foreach (var c in contacts)
                     {
-                        //Button btn = new Button()
-                        //{
-                        //    Image = "icons8chevronrightwhite.png",
-                        //    VerticalOptions = LayoutOptions.Start,
-                        //    WidthRequest = 65,
-                        //    HeightRequest = 65,
-                        //    BackgroundColor = Color.Transparent,
-                        //};
-
-                        //Image btn = new Image()
-                        //{
-                        //    Source = "icons8chevronrightwhite.png",
-                        //    VerticalOptions = LayoutOptions.Start,
-                        //    HorizontalOptions = LayoutOptions.Start,
-                        //    WidthRequest = 20,
-                        //    HeightRequest = 20,
-                        //    BackgroundColor = Color.Transparent,
-                        //    Margin=new Thickness(0,5,0,0),
-                        //};
-
                         Label btn = new Label()
                         {
                             Text=">",
                             VerticalOptions = LayoutOptions.Start,
                             HorizontalOptions = LayoutOptions.Start,
-                            //WidthRequest = 20,
-                            //HeightRequest = 20,
                             FontSize=20,
                             TextColor=Color.WhiteSmoke,
                             BackgroundColor = Color.Transparent,
@@ -79,8 +57,6 @@ namespace Inner.UI.Completed
                         else 
                             btn.Margin = 0;
 
-                       // btn.ScaleTo(0.5);
-
                         TapGestureRecognizer btnClick = new TapGestureRecognizer();
                         btnClick.NumberOfTapsRequired = 1;
 
@@ -90,10 +66,6 @@ namespace Inner.UI.Completed
                         };
                         btn.GestureRecognizers.Add(btnClick);
                        
-                        //btn.Clicked += (sender, e) => {
-                        //    var profilePage = new InnerProfilePage(c);
-                        //    Navigation.PushAsync(profilePage);    
-                        //};
 
                         grdInnerSummary.Children.Add(new Label { Text = string.Format("{0} {1}", c.FirstName, c.LastName),TextColor = Color.WhiteSmoke,FontSize=16, VerticalOptions = LayoutOptions.Start,Margin=new Thickness(0,5,0,0) }, col, row);
                         grdInnerSummary.Children.Add(btn, ++col, row);

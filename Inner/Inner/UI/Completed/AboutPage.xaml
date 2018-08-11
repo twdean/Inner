@@ -1,7 +1,46 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     x:Class="Inner.UI.Completed.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <ContentPage.Content />
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImage="bluebackground.png">
+    <ScrollView>
+        <StackLayout Margin="20,0,20,0" Orientation="Vertical" Spacing="20">
+            <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center" Text="About" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+                <BoxView Grid.Row="0" Grid.ColumnSpan="2" Margin="30,0,30,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Color="White" />
+            </Grid>
+             <Grid Margin="0" Padding="50" ColumnSpacing="0" RowSpacing="0" >
+                <Label 
+                    x:Name="lblAbout"
+                    Grid.Row="0" 
+                       Grid.ColumnSpan="2" 
+                       FontAttributes="Bold" 
+                       FontSize="20" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       VerticalOptions="CenterAndExpand" 
+                        VerticalTextAlignment="Center"
+                        />
+            </Grid>
+            <Grid BackgroundColor="Blue" Padding="5">
+                <Button x:Name="btnFeedbackText" 
+                 Grid.Row="0" 
+                    Grid.ColumnSpan="2" 
+                    FontAttributes="Bold" 
+                    FontSize="20" 
+                    TextColor="White" 
+                    Clicked="Handle_Clicked"
+                  />
+             
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

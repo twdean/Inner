@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using Foundation;
 using ImageCircle.Forms.Plugin.iOS;
 using Inner.Classes;
 using Inner.UI;
-using MessageUI;
 using SegmentedControl.FormsPlugin.iOS;
 using UIKit;
 using UserNotifications;
@@ -38,7 +34,9 @@ namespace Inner.iOS
                         // reset our badge
                         UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
-                        ScheduleNotification();
+                        ClearPendingNotifications();
+
+                        //ScheduleNotification();
                         formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
                     }
                 }
@@ -54,7 +52,9 @@ namespace Inner.iOS
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             try
             {
-                ScheduleNotification();
+                ClearPendingNotifications();
+
+                //ScheduleNotification();
                 formsApp.MainPage.Navigation.PushAsync(new LocalNotificationPage());
             }
             catch (Exception ex)
@@ -63,29 +63,29 @@ namespace Inner.iOS
             }
         }
 
-        private void ScheduleNotification()
-        {
-            var prefs = FileManager.GetPreferences();
-            var nextDate = InnerUtility.GetNextRunDate(prefs.Frequency);
-            prefs.NextNotifyDate = nextDate;
-            FileManager.SavePreferences(prefs);
+        //private void ScheduleNotification()
+        //{
+        //    var prefs = FileManager.GetPreferences();
+        //    var nextDate = InnerUtility.GetNextRunDate(prefs.Frequency);
+        //    prefs.NextNotifyDate = nextDate;
+        //    FileManager.SavePreferences(prefs);
 
-            var DateInSeconds = (nextDate - DateTime.Now).TotalSeconds;
+        //    var DateInSeconds = (nextDate - DateTime.Now).TotalSeconds;
 
-            var content = new UNMutableNotificationContent
-            {
-                Title = "Inner",
-                Subtitle = "Don't be shy",
-                Body = "Time to talk to someone in your circle today!",
-                Badge = 1,
-                Sound = UNNotificationSound.Default,
-            };
+        //    var content = new UNMutableNotificationContent
+        //    {
+        //        Title = "Inner",
+        //        Subtitle = "Don't be shy",
+        //        Body = "Time to talk to someone in your circle today!",
+        //        Badge = 1,
+        //        Sound = UNNotificationSound.Default,
+        //    };
 
-            var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(DateInSeconds, false);
-            var request = UNNotificationRequest.FromIdentifier("Inner Apps", content, trigger);
+        //    var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(DateInSeconds, false);
+        //    var request = UNNotificationRequest.FromIdentifier("Inner Apps", content, trigger);
 
-            UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
-        }
+        //    UNUserNotificationCenter.Current.AddNotificationRequestAsync(request);
+        //}
 
         private void ClearPendingNotifications()
         {
